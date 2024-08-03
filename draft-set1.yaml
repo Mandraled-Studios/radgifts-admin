@@ -1,0 +1,49 @@
+models:
+  Hamper:
+    title: string:128
+    excerpt: string:255
+    hamper_description: text
+    thumbnail: string default:"images/default-product-image.jpg"
+    usual_price: decimal:8,2 nullable
+    offer_price: decimal:8,2 nullable
+    corporate_hamper_flag: boolean default:true
+    seo_title: string:128 nullable
+    meta_description: string:255 nullable
+    slug: string:128
+    is_active: boolean default:false
+    has_variants: boolean default:false
+    SoftDeletes
+    relationships:
+        belongsToMany: Media, Collection, Order
+        hasMany: VariantAttribute
+  
+  VariantAttribute:
+    attribute_name: string:64
+    switch_type: string:64
+    hamper_id: id foreign:hampers.id
+    SoftDeletes
+    relationships:
+        belongsTo: Hamper
+        hasMany: VariantValue
+
+  VariantValue:
+    value_name: string:128
+    switch_value: string:64
+    variant_attribute_id: id foreign:variant_attributes.id
+    SoftDeletes
+    relationships:
+        belongsTo: VariantAttribute
+
+  Collection:
+    title: string:128
+    excerpt: string:255
+    hamper_description: text
+    thumbnail: string default:"images/default-collection-image.jpg"
+    seo_title: string:128 nullable
+    meta_description: string:255 nullable
+    slug: string:128
+    is_active: boolean default:false
+    SoftDeletes
+    relationships:
+        belongsToMany: Hamper
+

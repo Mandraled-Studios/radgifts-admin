@@ -1,0 +1,20 @@
+created:
+    - database/factories/WorkFactory.php
+    - database/factories/WorkCategoryFactory.php
+    - database/migrations/2024_08_03_071952_create_works_table.php
+    - database/migrations/2024_08_03_071953_create_work_categories_table.php
+    - database/migrations/2024_08_03_071954_create_media_work_table.php
+    - database/migrations/2024_08_03_071955_create_category_work_table.php
+    - database/migrations/2024_08_03_071956_create_media_work_category_table.php
+    - database/migrations/2024_08_03_071957_create_work_work_category_table.php
+    - app/Models/Work.php
+    - app/Models/WorkCategory.php
+models:
+    Category: {  }
+    Collection: { title: 'string:128', excerpt: string, hamper_description: text, thumbnail: 'string default:images/default-collection-image.jpg', seo_title: 'string:128 nullable', meta_description: 'string nullable', slug: 'string:128', is_active: boolean, corporate_hamper_flag: 'boolean default:1' }
+    Hamper: { title: 'string:128', excerpt: string, hamper_description: text, thumbnail: 'string default:images/default-product-image.jpg', usual_price: 'decimal:8,2 nullable', offer_price: 'decimal:8,2 nullable', corporate_hamper_flag: 'boolean default:1', seo_title: 'string:128 nullable', meta_description: 'string nullable', slug: 'string:128', is_active: boolean, has_variants: boolean }
+    User: { name: string, email: string, email_verified_at: 'timestamp nullable', password: string, two_factor_secret: 'text nullable', two_factor_recovery_codes: 'text nullable', two_factor_confirmed_at: 'timestamp nullable', remember_token: 'string:100 nullable', current_team_id: 'biginteger unsigned nullable', profile_photo_path: 'string:2048 nullable' }
+    VariantAttribute: { attribute_name: 'string:64', switch_type: 'string:64', hamper_id: 'biginteger unsigned' }
+    VariantValue: { value_name: 'string:128', switch_value: 'string:64', variant_attribute_id: 'biginteger unsigned' }
+    Work: { title: 'string:128', excerpt: 'string:255', description: text, seo_title: 'string:128 nullable', meta_description: 'string:255 nullable', slug: 'string:128', is_active: 'boolean default:false', softdeletes: SoftDeletes, relationships: { belongsToMany: 'Media, Category' } }
+    WorkCategory: { title: 'string:128', excerpt: 'string:255', description: text, seo_title: 'string:128 nullable', meta_description: 'string:255 nullable', slug: 'string:128', is_active: 'boolean default:false', softdeletes: SoftDeletes, relationships: { belongsToMany: 'Media, Work' } }

@@ -1,0 +1,24 @@
+models:
+  Work:
+    title: string:128
+    excerpt: string:255
+    description: text
+    seo_title: string:128 nullable
+    meta_description: string:255 nullable
+    slug: string:128
+    is_active: boolean default:false
+    SoftDeletes
+    relationships:
+        belongsToMany: Media, Category
+
+  WorkCategory:
+    title: string:128
+    excerpt: string:255
+    description: text
+    seo_title: string:128 nullable
+    meta_description: string:255 nullable
+    slug: string:128
+    is_active: boolean default:false
+    SoftDeletes
+    relationships:
+        belongsToMany: Media, Work
