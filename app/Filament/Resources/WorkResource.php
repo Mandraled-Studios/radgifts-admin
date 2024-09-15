@@ -47,6 +47,8 @@ class WorkResource extends Resource
                             Forms\Components\RichEditor::make('description')
                                 ->required()
                                 ->columnSpanFull(),
+                            Forms\Components\TagsInput::make('box_contents')
+                                ->nullable(),
                             Forms\Components\Toggle::make('is_active')
                                 ->required(),
                         ])->columnSpan(4),
@@ -76,6 +78,7 @@ class WorkResource extends Resource
                                 ->description('')
                                 ->schema([
                                     Forms\Components\FileUpload::make('thumbnail')
+                                        ->label("Client's Logo")
                                         ->image()
                                         ->imageEditor()
                                         ->default('images/default-product-image.jpg'),

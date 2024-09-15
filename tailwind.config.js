@@ -15,10 +15,24 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Outfit', ...defaultTheme.fontFamily.sans],
             },
+
+            colors: {
+                'primary-dark': '#341D66',
+                'primary': '#4C3278',
+                'primary-light': '#DFDCEB',
+                'accent-dark': '#395753',
+                'accent': '#88A29F',
+                'accent-light': '#BBD2CF',
+                'dark-grey': '#2F2F2F'
+            }
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [
+                forms, 
+                typography, 
+                require('@tailwindcss/aspect-ratio'),
+             ],
 };

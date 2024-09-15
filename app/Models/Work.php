@@ -21,6 +21,7 @@ class Work extends Model
         'title',
         'excerpt',
         'description',
+        'box_contents',
         'seo_title',
         'meta_description',
         'slug',
@@ -36,6 +37,7 @@ class Work extends Model
     protected $casts = [
         'id' => 'integer',
         'is_active' => 'boolean',
+        'box_contents' => 'array',
     ];
 
     public function media(): BelongsToMany

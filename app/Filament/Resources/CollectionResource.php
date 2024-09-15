@@ -46,14 +46,14 @@ class CollectionResource extends Resource
                                 ->rows(3)
                                 ->maxLength(255)
                                 ->columnSpanFull(),
-                            Forms\Components\RichEditor::make('hamper_description')
+                            Forms\Components\RichEditor::make('collection_description')
                                 ->required()
                                 ->columnSpanFull(),
                             Forms\Components\Toggle::make('corporate_hamper_flag')
                                 ->label('Is this a corporate collection?')
                                 ->default(true),
-                            Forms\Components\Toggle::make('is_active')
-                                ->required(),
+                            Forms\Components\Toggle::make('is_active'),
+                            Forms\Components\Toggle::make('is_featured'),
                         ])->columnSpan(4),
                     Section::make()
                         ->schema([

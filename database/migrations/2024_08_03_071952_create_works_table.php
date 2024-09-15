@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title', 128);
             $table->string('excerpt', 255);
             $table->text('description');
+            $table->text('box_contents')->nullable();
             $table->string('seo_title', 128)->nullable();
             $table->string('meta_description', 255)->nullable();
             $table->string('slug', 128);

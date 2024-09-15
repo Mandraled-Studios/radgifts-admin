@@ -25,6 +25,7 @@ class Collection extends Model
         'meta_description',
         'slug',
         'is_active',
+        'is_featured',
     ];
 
     /**
