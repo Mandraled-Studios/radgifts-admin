@@ -19,7 +19,7 @@
                             <div class="ms-featured-collection-item group bg-white relative">
                                 <div
                                     class="ms-featured-collection-bg overflow-hidden group-hover:opacity-75 lg:h-80 px-3 py-3 relative">
-                                    <img src="{{ asset('storage/'.$fc->thumbnail) }}"
+                                    <img src="{{ asset($fc->thumbnail) }}"
                                         alt="{{ $fc->title }}"
                                         class="block h-full w-full object-cover object-center mx-auto">
                                 </div>
