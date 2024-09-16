@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 
+Route::get('/under-maintenance', [PagesController::class, 'maintenance'])->name('maintenance');
 Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/corporate-gifting', [PagesController::class, 'corporateGifting'])->name('pages.corporate');
 Route::get('/personal-gifting', [PagesController::class, 'personalGifting'])->name('pages.personal');
@@ -19,4 +20,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/{static}', [PagesController::class, 'staticPage'])->name('pages.static');
+Route::get('/{static}?q=test', [PagesController::class, 'staticPage'])->name('pages.static');

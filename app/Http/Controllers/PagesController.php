@@ -5,10 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Work;
 use App\Models\Collection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class PagesController extends Controller
 {
-    public function home() { 
+
+    public function maintenance() {
+        return view('pages.maintenance');
+    }
+
+    public function home(Request $request) { 
         $clients = [
           (object) ['logo' => 'images/clients/4700-bc.jpg'],
           (object) ['logo' => 'images/clients/ardart.jpg'],
@@ -61,14 +67,18 @@ class PagesController extends Controller
         
         $recentWorks = Work::where('is_active', 1)->latest()->limit(3)->get();
 
-        return view('pages.home')->with([
-            'clients' => $clients,
-            'featuredCorporate' => $featuredCorporate,
-            'recentWorks' => $recentWorks
-        ]); 
+        if($request->q == "test") {
+            return view('pages.home')->with([
+                'clients' => $clients,
+                'featuredCorporate' => $featuredCorporate,
+                'recentWorks' => $recentWorks
+            ]); 
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
     }
 
-    public function staticPage($static) {
+    public function staticPage($static, Request $request) {
         $about = '
         <section class="pb-0 lg:pb-3">
             <figure class="about-banner h-56 relative mb-10 lg:mb-32">
@@ -163,24 +173,40 @@ class PagesController extends Controller
         ]);
     }
 
-    public function corporateGifting() {
+    public function corporateGifting(Request $request) {
         $corporate = Collection::where('corporate_flag', 1)->get();
-        return view('pages.corporate')->with([
-            'corporate' => $corporate,
-        ]);
+        
+        if($request->q == "test") {
+            return view('pages.corporate')->with([
+                'corporate' => $corporate,
+            ]);
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
+        
     }
 
-    public function ourWorks() {
+    public function ourWorks(Request $request) {
         $works = Work::all();
-        return view('pages.ourworks')->with([
-            'works' => $works
-        ]);
+
+        if($request->q == "test") {
+            return view('pages.ourworks')->with([
+                'works' => $works
+            ]);
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
     }
 
-    public function workDetails($work) {
+    public function workDetails($work, Request $request) {
         $chosenWork = Work::where('slug', $work)->first();
-        return view('pages.workDetail')->with([
-            'work' => $chosenWork 
-        ]);
+
+        if($request->q == "test") {
+            return view('pages.workDetail')->with([
+                'work' => $chosenWork 
+            ]);
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
     }
 }
