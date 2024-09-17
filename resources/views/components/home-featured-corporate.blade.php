@@ -44,6 +44,7 @@
             </div>
             <!-- End of Product Grid -->
 
+            {{-- 
             <h4 class="text-center text-primary font-light uppercase text-lg mb-6"> More Collections </h4>
 
             <div class="flex flex-wrap justify-center gap-4">
@@ -69,6 +70,7 @@
                     Gourmet
                 </a>
             </div>
+            --}}
         </div>
     </div>
 </section>

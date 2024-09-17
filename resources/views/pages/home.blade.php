@@ -44,7 +44,7 @@
         <div class="ms-container">
             <div class="lg:max-w-3xl lg:mx-auto text-center">
                 <span class="ms-super-header"> For Unforgettable Moments </span>
-                <h2 class="text-primary font-semibold text-xl mb-4"> Corporate Gifting Collections </h2>
+                <h2 class="text-primary font-semibold text-xl mb-4"> Personal Gifting Collections </h2>
                 <p class="mb-4">
                     Unique Hampers filled with happiness and crafted with love and care for your special ones for every occasion.
                 </p>
