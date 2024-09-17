@@ -9,6 +9,9 @@ Route::get('/corporate-gifting', [PagesController::class, 'corporateGifting'])->
 Route::get('/personal-gifting', [PagesController::class, 'personalGifting'])->name('pages.personal');
 Route::get('/our-works', [PagesController::class, 'ourWorks'])->name('pages.works');
 Route::get('/our-works/{work}', [PagesController::class, 'workDetails'])->name('pages.works.details');
+Route::get('/about', [PagesController::class, 'about'])->name('pages.about');
+Route::get('/contact-us', [PagesController::class, 'contact'])->name('pages.contact');
+Route::get('/contact-us/faq', [PagesController::class, 'faq'])->name('pages.contact.faq');
 
 Route::middleware([
     'auth:sanctum',
@@ -19,5 +22,3 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
-Route::get('/{static}?q=test', [PagesController::class, 'staticPage'])->name('pages.static');

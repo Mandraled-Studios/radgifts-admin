@@ -6,7 +6,7 @@
         <nav class="ms-container py-6">
             <ul class="md:flex md:items-center justify-center w-full">
                 <li class="px-4 py-3 text-center">
-                    <a class="text-white" href="{{ route('pages.static', ['static' => 'about']) }}">About</a>
+                    <a class="text-white" href="{{ route('pages.about') }}">About</a>
                 </li>
                 <li class="px-4 py-3 text-center">
                     <a class="text-white" href="{{ route('pages.works') }}">Our Works</a>
@@ -15,7 +15,7 @@
                     <a class="text-white" href="{{ route('filamentblog.post.index') }}">Articles</a>
                 </li>
                 <li class="px-4 py-3 text-center">
-                    <a class="text-white" href="{{ route('pages.static', ['static' => 'contact']) }}">Contact Us</a>
+                    <a class="text-white" href="{{ route('pages.contact') }}">Contact Us</a>
                 </li>
             </ul>
         </nav>

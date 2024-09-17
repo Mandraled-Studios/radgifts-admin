@@ -22,13 +22,13 @@
                         <x-nav-link href="{{ route('pages.works') }}">
                             Our Works
                         </x-nav-link>
-                        <x-nav-link href="{{ route('pages.static', ['static' => 'about']) }}">
+                        <x-nav-link href="{{ route('pages.about') }}">
                             About
                         </x-nav-link>
-                        <x-nav-link href="{{ route('pages.static', ['static' => 'articles']) }}">
+                        <x-nav-link href="{{ route('filamentblog.post.index') }}">
                             Articles
                         </x-nav-link>
-                        <x-nav-link href="{{ route('pages.static', ['static' => 'contact']) }}">
+                        <x-nav-link href="{{ route('pages.contact') }}">
                             Contact
                         </x-nav-link>
                     </div>
@@ -231,13 +231,13 @@
                 <x-responsive-nav-link href="{{ route('pages.works') }}">
                     Our Works
                 </x-responsive-nav-link>
-                <x-responsive-nav-link href="{{ route('pages.static', ['static' => 'about']) }}">
+                <x-responsive-nav-link href="{{ route('pages.about') }}">
                     About
                 </x-responsive-nav-link>
-                <x-responsive-nav-link href="{{ route('pages.static', ['static' => 'articles']) }}">
+                <x-responsive-nav-link href="{{ route('filamentblog.post.index') }}">
                     Articles
                 </x-responsive-nav-link>
-                <x-responsive-nav-link href="{{ route('pages.static', ['static' => 'contact']) }}">
+                <x-responsive-nav-link href="{{ route('pages.contact') }}">
                     Contact
                 </x-responsive-nav-link>
                 @guest

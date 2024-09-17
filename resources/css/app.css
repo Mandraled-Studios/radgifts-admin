@@ -854,3 +854,8 @@ video {
  .ms-gift-bg::after {
     right: 0;
  }
+
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+ }
