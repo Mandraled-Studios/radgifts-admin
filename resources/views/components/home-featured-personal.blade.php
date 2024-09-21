@@ -18,7 +18,7 @@
                                 class="ms-featured-collection-bg rounded-xl overflow-hidden aspect-h-1 aspect-w-1 bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 mx-4 my-4">
                                 <img src="{{ asset('storage/'.$hamper->media->first()->path) }}"
                                     alt=""
-                                    class="block h-full w-5/6 object-contain object-center mx-auto rounded-xl overflow-hidden lg:h-full lg:w-5/6">
+                                    class="block h-full w-full object-cover object-center rounded-xl overflow-hidden">
                             </div>
                             <div class="px-4 py-2">
                                 <p class="text-lg uppercase font-semibold text-gray-800 mb-2 text-center">
