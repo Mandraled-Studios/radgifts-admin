@@ -18,7 +18,6 @@
             </div>
         </div>
     </section>
-    <x-gifting-categories />
     <x-home-featured-corporate :featuredCorporate="$featuredCorporate" />
     <section id="stats" class="py-8 ms-gift-bg">
         <div class="ms-container lg:max-w-3xl lg:mx-auto">

@@ -11,20 +11,22 @@
             </div>
             <div class="px-6 lg:px-0 lg:py-12 text-center">
                 <h1 class="mt-4 text-2xl sm:text-3xl lg:text-5xl font-bold tracking-tight leading-relaxed text-gray-100">
-                    Perfect Hampers For Corporates & Personal
+                    One stop solution for all your gifting needs
                 </h1>
                 <p class="mt-6 text-lg leading-8 text-gray-200">
-                    Welcome your employees with gifts that highlight your branding and make them feel truly included.
+                    Make corporate and personal gifting effortless with our diverse collections and creative customizations
                 </p>
                 <div class="mt-10 flex justify-center items-center gap-x-6">
                     <a href="#"
-                        class="rounded-full text-white px-3.5 py-2.5 text-sm font-semibold bg-primary shadow-sm hover:bg-primary/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-                        Gift Now
+                        class="rounded-full text-primary px-3.5 py-2.5 text-sm font-semibold bg-white shadow-sm hover:bg-primary/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                        Know More
                     </a>
+                    {{-- 
                     <a href="#" class="text-sm font-semibold underline leading-6 text-primary">
                         Read Our Articles To Get More Ideas
                         <span aria-hidden="true">→</span>
                     </a>
+                    --}}
                 </div>
             </div>
             <div class="mt-6 w-full lg:mx-0 lg:mt-0 lg:pt-12 pb-4 flex items-end">
