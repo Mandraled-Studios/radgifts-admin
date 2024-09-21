@@ -49,6 +49,8 @@ class WorkResource extends Resource
                                 ->columnSpanFull(),
                             Forms\Components\TagsInput::make('box_contents')
                                 ->nullable(),
+                            Forms\Components\Toggle::make('is_featured')
+                                ->required(),
                             Forms\Components\Toggle::make('is_active')
                                 ->required(),
                         ])->columnSpan(4),

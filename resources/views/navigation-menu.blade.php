@@ -5,7 +5,7 @@
             <div class="flex grow">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('home') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
@@ -14,39 +14,29 @@
                 <div class="hidden space-x-8 md:-my-px md:ms-10 md:flex md:justify-between md:w-full">
                     <div class="flex space-x-2 xl:space-x-8">
                         <x-nav-link href="{{ route('pages.corporate') }}">
-                            Corporate Gifting
+                            Corporate
                         </x-nav-link>
                         <x-nav-link href="{{ route('pages.personal') }}">
-                            Personal Gifting
+                            Personal
                         </x-nav-link>
                         <x-nav-link href="{{ route('pages.works') }}">
-                            Our Works
+                            Our Portfolio
                         </x-nav-link>
                         <x-nav-link href="{{ route('pages.about') }}">
                             About
                         </x-nav-link>
                         <x-nav-link href="{{ route('filamentblog.post.index') }}">
-                            Articles
+                            Resources
                         </x-nav-link>
                         <x-nav-link href="{{ route('pages.contact') }}">
-                            Contact
+                            Contact Us
                         </x-nav-link>
                     </div>
                     <div class="flex space-x-2">
                         <x-nav-link class="px-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.943" height="23" viewBox="0 0 22.943 23">
-                                <defs>
-                                <clipPath id="clip-path">
-                                    <rect id="Rectangle_2" data-name="Rectangle 2" width="22.943" height="23" fill="#111"/>
-                                </clipPath>
-                                </defs>
-                                <g id="Group_231" data-name="Group 231" transform="translate(0 0)">
-                                <g id="Group_5" data-name="Group 5" transform="translate(0 0)" clip-path="url(#clip-path)">
-                                    <path id="Path_10" data-name="Path 10" d="M0,23l1.649-6.152a11.384,11.384,0,1,1,4.535,4.5Zm6.491-3.962.389.232a9.242,9.242,0,1,0-3.162-3.134l.239.393-.92,3.435Z" transform="translate(0 0)" fill="#111"/>
-                                    <path id="Path_11" data-name="Path 11" d="M19.088,16.261a1.91,1.91,0,0,0-1.627-.367c-.423.173-.692.835-.966,1.172a.4.4,0,0,1-.524.114,7.37,7.37,0,0,1-3.677-3.15.451.451,0,0,1,.057-.616,2.494,2.494,0,0,0,.668-1.084,2.371,2.371,0,0,0-.3-1.284,3.038,3.038,0,0,0-.948-1.428,1.3,1.3,0,0,0-1.41.209A2.864,2.864,0,0,0,9.37,12.1a3.216,3.216,0,0,0,.089.72,5.945,5.945,0,0,0,.691,1.591,12.639,12.639,0,0,0,.72,1.1A11.14,11.14,0,0,0,14,18.406a9.452,9.452,0,0,0,1.949.927,4.327,4.327,0,0,0,2.269.359,2.748,2.748,0,0,0,2.058-1.531,1.333,1.333,0,0,0,.1-.781c-.118-.538-.846-.858-1.281-1.118" transform="translate(-3.279 -3.321)" fill="#111" fill-rule="evenodd"/>
-                                </g>
-                                </g>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18.569" height="18.569" viewBox="0 0 18.569 18.569">
+                                <path id="Icon_akar-linkedin-fill" data-name="Icon akar-linkedin-fill" d="M9.9,9.47h3.448v1.718A3.956,3.956,0,0,1,17.03,9.312c3.668,0,4.539,1.966,4.539,5.574v6.682H17.855v-5.86c0-2.055-.5-3.213-1.761-3.213-1.754,0-2.483,1.249-2.483,3.212v5.861H9.9V9.47ZM3.529,21.411H7.243V9.312H3.529v12.1ZM7.775,5.367a2.349,2.349,0,0,1-.7,1.673A2.387,2.387,0,0,1,3,5.367a2.353,2.353,0,0,1,.7-1.674,2.4,2.4,0,0,1,3.377,0A2.357,2.357,0,0,1,7.775,5.367Z" transform="translate(-3 -3)" fill="#4c3278"/>
+                            </svg>                              
                         </x-nav-link>
                         <x-nav-link class="px-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
@@ -58,7 +48,20 @@
                             </svg>                          
                         </x-nav-link>
                         <x-nav-link class="bg-primary-dark text-white px-4 py-2 rounded-full self-center">
-                            Book <span class="ms-1 me-1 md:hidden xl:inline">Your</span>Gift
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.943" height="23" viewBox="0 0 22.943 23">
+                                <defs>
+                                <clipPath id="clip-path">
+                                    <rect id="Rectangle_2" data-name="Rectangle 2" width="22.943" height="23" fill="#FFF"/>
+                                </clipPath>
+                                </defs>
+                                <g id="Group_231" data-name="Group 231" transform="translate(0 0)">
+                                <g id="Group_5" data-name="Group 5" transform="translate(0 0)" clip-path="url(#clip-path)">
+                                    <path id="Path_10" data-name="Path 10" d="M0,23l1.649-6.152a11.384,11.384,0,1,1,4.535,4.5Zm6.491-3.962.389.232a9.242,9.242,0,1,0-3.162-3.134l.239.393-.92,3.435Z" transform="translate(0 0)" fill="#FFF"/>
+                                    <path id="Path_11" data-name="Path 11" d="M19.088,16.261a1.91,1.91,0,0,0-1.627-.367c-.423.173-.692.835-.966,1.172a.4.4,0,0,1-.524.114,7.37,7.37,0,0,1-3.677-3.15.451.451,0,0,1,.057-.616,2.494,2.494,0,0,0,.668-1.084,2.371,2.371,0,0,0-.3-1.284,3.038,3.038,0,0,0-.948-1.428,1.3,1.3,0,0,0-1.41.209A2.864,2.864,0,0,0,9.37,12.1a3.216,3.216,0,0,0,.089.72,5.945,5.945,0,0,0,.691,1.591,12.639,12.639,0,0,0,.72,1.1A11.14,11.14,0,0,0,14,18.406a9.452,9.452,0,0,0,1.949.927,4.327,4.327,0,0,0,2.269.359,2.748,2.748,0,0,0,2.058-1.531,1.333,1.333,0,0,0,.1-.781c-.118-.538-.846-.858-1.281-1.118" transform="translate(-3.279 -3.321)" fill="#FFF" fill-rule="evenodd"/>
+                                </g>
+                                </g>
+                            </svg> 
+                            WhatsApp Us
                         </x-nav-link>
                     </div>
                 </div>
@@ -223,22 +226,22 @@
 
             <div class="mt-3 space-y-1 px-2">
                 <x-responsive-nav-link href="{{ route('pages.corporate') }}">
-                    Corporate Gifting
+                    Corporate
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href="{{ route('pages.personal') }}">
-                    Personal Gifting
+                    Personal
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href="{{ route('pages.works') }}">
-                    Our Works
+                    Our Portfolio
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href="{{ route('pages.about') }}">
                     About
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href="{{ route('filamentblog.post.index') }}">
-                    Articles
+                    Resources
                 </x-responsive-nav-link>
                 <x-responsive-nav-link href="{{ route('pages.contact') }}">
-                    Contact
+                    Contact Us
                 </x-responsive-nav-link>
                 @guest
                     {{-- Do Nothing --}}

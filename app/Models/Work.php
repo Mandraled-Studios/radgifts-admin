@@ -26,6 +26,7 @@ class Work extends Model
         'meta_description',
         'slug',
         'thumbnail',
+        'is_featured',
         'is_active',
     ];
 

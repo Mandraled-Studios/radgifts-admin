@@ -3,7 +3,7 @@
         <div class="ms-container">
             <div class="lg:max-w-3xl lg:mx-auto text-center">
                 <span class="ms-super-header"> Curated Hampers For Our Clients </span>
-                <h2 class="text-primary font-semibold text-xl mb-4"> Our Past Works </h2>
+                <h2 class="text-primary font-semibold text-xl md:text-2xl mb-4"> Our Past Works </h2>
                 <p class="mb-4">
                     Be it a festive season, a corporate gathering, or a milestone celebration, we have ideal gift choices for all occasions. From ready-to-go gift baskets and sets to tailor-made gifts designed for businesses, we offer a diverse range of options to cater to various needs. 
                 </p>
@@ -25,13 +25,13 @@
                             
                         </div>
                         <div class="px-4 py-4">
-                            <p class="text-center text-gray-700">
+                            <p class="text-center font-medium text-gray-700 text-lg lg:text-2xl">
                                 <a href="{{route('pages.works.details', ['work' => $work->slug])}}">
                                     <span aria-hidden="true" class="absolute inset-0"></span>
                                     {{ $work->title }}
                                 </a>
                             </p>
-                            <p class="text-center font-medium text-gray-900"> {{ $work->excerpt }} </p>
+                            <p class="text-center text-gray-900"> {{ $work->excerpt }} </p>
                         </div>
                     </div>
                 @endforeach

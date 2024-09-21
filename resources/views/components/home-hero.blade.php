@@ -18,7 +18,7 @@
                 </p>
                 <div class="mt-10 flex justify-center items-center gap-x-6">
                     <a href="#"
-                        class="rounded-full text-primary px-3.5 py-2.5 text-sm font-semibold bg-white shadow-sm hover:bg-primary/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                        class="rounded-full text-white px-6 py-3 text-lg lg:text-xl font-semibold bg-accent shadow-sm hover:bg-white/90 hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                         Know More
                     </a>
                     {{-- 

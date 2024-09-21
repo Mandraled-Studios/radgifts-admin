@@ -1,6 +1,6 @@
 <section id="curate-your-hampers" class="bg-gray-100/[60] py-12">
     <div class="ms-container text-center lg:max-w-2xl lg:mx-auto">
-        <h2 class="text-primary font-semibold text-lg lg:text-xl"> Curate Your Hamper </h2>
+        <h2 class="text-primary font-semibold text-lg sm:text-xl lg:text-2xl xl:text-3xl mb-4"> Curate Your Hamper </h2>
         <p> Curating a personalized hamper doesn't have to be complicated. With our simple steps and expert assistance, you can easily create a thoughtful and customized gift that will be cherished by the recipient. Whether it's for a friend, family member, or colleague, a curated hamper from us is sure to make a lasting impression. </p>
     </div>
     <div class="ms-container py-10">

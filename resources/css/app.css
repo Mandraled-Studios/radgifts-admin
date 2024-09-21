@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        font-family: "Outfit", sans-serif;
+    }
+}
+
 [x-cloak] {
     display: none;
 }
@@ -25,7 +31,7 @@ html {
     -webkit-text-size-adjust: 100%;
     -moz-tab-size: 4;
     tab-size: 4;
-    font-family: Figtree, ui-sans-serif, system-ui, sans-serif,
+    font-family: Outfit, ui-sans-serif, system-ui, sans-serif,
         Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     font-feature-settings: normal;
     font-variation-settings: normal;
@@ -512,7 +518,7 @@ video {
     text-align: center;
 }
 .font-sans {
-    font-family: Figtree, ui-sans-serif, system-ui, sans-serif,
+    font-family: Outfit, ui-sans-serif, system-ui, sans-serif,
         Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 .text-sm {
@@ -819,6 +825,10 @@ video {
     100% {
        transform: translateX(-100%);
     }
+ }
+
+ .ms-featured-collection-item {
+    @apply rounded-xl overflow-hidden;
  }
 
  .ms-featured-collection-item .ms-featured-collection-bg-old {

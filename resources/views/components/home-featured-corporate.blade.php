@@ -1,8 +1,8 @@
 <section id="corporate-gifting" class="py-12">
     <div class="ms-container text-center lg:max-w-4xl lg:mx-auto">
-        <span class="ms-super-header"> For Your Corporate Family </span>
+        <span class="ms-super-header"> </span>
         <h2 class="text-primary font-semibold text-xl lg:text-2xl mb-6"> Corporate Gifting </h2>
-        <p class="mb-6"> Corporate gifting is a powerful tool to build brand affinity and establish long-lasting business relationships. Gifting is not just limited to festivals, but can be given for various occasions like onboarding, farewells, birthdays, promotions, organisational milestones and individual achievements. A good quality corporate gift shows that you're invested in your stakeholder's experience and you should choose a gift that reflects your brand and we are here to curate the best quality hampers to showcase the brand and improve employee engagement and satisfaction. </p>
+        <p class="mb-6"> Corporate gifting is a powerful tool to build brand affinity and establish long-lasting business relationships. Gifting is not just limited to festivals, but can be given for various occasions like onboarding, farewells, birthdays, promotions, organisational milestones and individual achievements. A good quality corporate gift shows that you’re invested in your stakeholder’s experience and you should choose a gift that reflects your brand and we are here to curate the best quality hampers to showcase the brand and improve employee engagement and satisfaction. </p>
     </div>
     <div class="bg-primary-light py-12">
         <div class="ms-container">
@@ -24,7 +24,7 @@
                                         class="block h-full w-full object-cover object-center mx-auto">
                                 </div>
                                 <div class="px-4 py-4">
-                                    <p class="text-sm uppercase font-semibold text-gray-800 mb-2">
+                                    <p class="text-lg uppercase font-semibold text-gray-800 mb-2">
                                         <a href="#">
                                             <span aria-hidden="true" class="absolute inset-0"></span>
                                             {{ $fc->title }}
@@ -40,6 +40,12 @@
                         <p class="text-center"> No Featured Collections To Show At The Moment </p>
                     @endif
                     <!-- More products... -->
+                </div>
+
+                <div class="flex justify-center">
+                    <a href="{{route('pages.corporate')}}" class="py-2 px-4 text-white bg-primary rounded-full font-semibold">
+                        View All Collections
+                    </a>
                 </div>
             </div>
             <!-- End of Product Grid -->
