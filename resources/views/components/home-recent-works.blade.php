@@ -11,9 +11,9 @@
             <div class="mt-2 grid grid-cols-1 gap-x-2 gap-y-4 lg:grid-cols-3">
                 
                 @foreach ($works as $work)
-                    <div class="ms-recent-work-item group bg-white relative">
+                    <div class="ms-recent-work-item rounded-xl overflow-hidden group bg-white relative">
                         <div
-                            class="ms-recent-work-bg bg-gray-200 group-hover:opacity-75 lg:h-80 mx-4 my-4">
+                            class="ms-recent-work-bg rounded-xl overflow-hidden bg-gray-200 group-hover:opacity-75 lg:h-80 mx-4 my-4">
                             @php
                                 $workMedia = $work->media;
                                 if(count($workMedia) > 0) {
@@ -29,7 +29,7 @@
                             @endphp
                             <img src="{{ asset($workImg) }}"
                                 alt="{{$work->title}}"
-                                class="block h-full w-full object-cover object-center mx-auto">
+                                class="block h-full w-full object-cover object-center rounded-xl overflow-hidden mx-auto">
                         </div>
                         <div class="px-4 py-4">
                             <p class="text-lg lg:text-xl mb-2 font-semibold text-accent-dark">

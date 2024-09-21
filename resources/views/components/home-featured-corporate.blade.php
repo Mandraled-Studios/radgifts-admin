@@ -13,7 +13,7 @@
             <!-- Product Grid -->
             <div class="py-2 sm:px-3 sm:py-4 mb-8">
 
-                <div class="mt-2 {{ count($featuredCorporate) != 0 ? 'grid grid-cols-1 gap-x-2 gap-y-4 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-2' : 'flex justify-center'}}">
+                <div class="mt-2 mb-6 {{ count($featuredCorporate) != 0 ? 'grid grid-cols-1 gap-x-2 gap-y-4 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-2' : 'flex justify-center'}}">
                     @if (count($featuredCorporate) != 0)
                         @foreach ($featuredCorporate as $fc)
                             <div class="ms-featured-collection-item group bg-white relative">

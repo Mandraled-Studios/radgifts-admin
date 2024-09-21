@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 py-3 border-b border-gray-100 dark:border-gray-700">
+<nav x-data="{ open: false }" class="bg-white py-3 border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="ms-container">
         <div class="flex justify-between h-16">

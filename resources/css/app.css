@@ -847,8 +847,8 @@ video {
     position: absolute;
     content: '';
     display: block;
-    width: 275px;
-    height: 275px;
+    width: 120px;
+    height: 120px;
     max-height: 100%;
     background-image: url('../../images/gift-pattern.png');
     background-repeat: no-repeat;
@@ -868,4 +868,15 @@ video {
  .row {
     display: flex;
     flex-wrap: wrap;
+ }
+
+ @media only screen and (min-width:768px) {
+    .ms-gift-bg::before, 
+    .ms-gift-bg::after 
+    {
+       width: 275px;
+       height: 275px;
+       max-height: 100%;
+       bottom: 0px;
+    }
  }

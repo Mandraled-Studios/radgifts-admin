@@ -19,7 +19,7 @@ class Collection extends Model
     protected $fillable = [
         'title',
         'excerpt',
-        'hamper_description',
+        'collection_description',
         'thumbnail',
         'seo_title',
         'meta_description',
