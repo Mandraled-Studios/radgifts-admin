@@ -1,36 +1,26 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\CollectionResource\RelationManagers;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Hamper;
-use Filament\Forms\Get;
-use Filament\Forms\Set;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-use Illuminate\Support\Str;
-use Filament\Resources\Resource;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\HamperResource\Pages;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\HamperResource\RelationManagers;
+use Filament\Resources\RelationManagers\RelationManager;
 
-class HamperResource extends Resource
+class HampersRelationManager extends RelationManager
 {
-    protected static ?string $model = Hamper::class;
+    protected static string $relationship = 'hampers';
 
-    protected static ?string $navigationIcon = 'heroicon-o-gift';
-    protected static ?string $navigationGroup = 'Manage Hampers';
-
-    public static function form(Form $form): Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
-
                 Grid::make([
                     'default' => 1,
                     'md' => 6,
@@ -43,19 +33,15 @@ class HamperResource extends Resource
                                 ->required()
                                 ->maxLength(128),
                             Forms\Components\Textarea::make('excerpt')
-                                ->nullable()
+                                ->required()
                                 ->rows(3)
                                 ->maxLength(255),
                             Forms\Components\RichEditor::make('hamper_description')
-                                ->nullable()
+                                ->required()
                                 ->columnSpanFull(),
-                            // Forms\Components\Select::make()
-                            //     ->relationship('hamper'),
                             Forms\Components\TextInput::make('usual_price')
-                                ->nullable()
                                 ->numeric(),
                             Forms\Components\TextInput::make('offer_price')
-                                ->nullable()
                                 ->numeric(),
                             Forms\Components\Toggle::make('is_active')
                                 ->default(false),
@@ -71,7 +57,6 @@ class HamperResource extends Resource
                                 ->description('')
                                 ->schema([
                                     Forms\Components\TextInput::make('seo_title')
-                                        ->nullable()
                                         ->maxLength(128)
                                         ->live(debounce: 500)
                                         ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
@@ -82,10 +67,8 @@ class HamperResource extends Resource
                                             $set('slug', Str::slug($state));
                                         }),
                                     Forms\Components\TextInput::make('meta_description')
-                                        ->nullable()
                                         ->maxLength(255),
                                     Forms\Components\TextInput::make('slug')
-                                        ->nullable()
                                         ->required()
                                         ->maxLength(128),
                             ]),
@@ -93,7 +76,6 @@ class HamperResource extends Resource
                                 ->description('')
                                 ->schema([
                                     Forms\Components\FileUpload::make('thumbnail')
-                                        ->nullable()
                                         ->image()
                                         ->imageEditor()
                                         ->default('images/default-product-image.jpg'),
@@ -108,76 +90,28 @@ class HamperResource extends Resource
             ]);
     }
 
-    public static function table(Table $table): Table
+    public function table(Table $table): Table
     {
         return $table
+            ->recordTitleAttribute('title')
             ->columns([
-                Tables\Columns\ImageColumn::make('thumbnail'),
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('excerpt')
-                    ->words(15)
-                    ->wrap()
-                    ->lineClamp(2),
-                Tables\Columns\TextColumn::make('usual_price')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('offer_price')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\IconColumn::make('corporate_hamper_flag')
-                    ->boolean(),
-                Tables\Columns\TextColumn::make('seo_title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('meta_description')
-                    ->words(15)
-                    ->wrap()
-                    ->lineClamp(2),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
-                Tables\Columns\IconColumn::make('is_active')
-                    ->boolean(),
-                Tables\Columns\IconColumn::make('has_variants')
-                    ->boolean(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('deleted_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('title'),
             ])
             ->filters([
                 //
             ])
+            ->headerActions([
+                Tables\Actions\CreateAction::make(),
+                Tables\Actions\AttachAction::make(),
+            ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            RelationManagers\CollectionsRelationManager::class,
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListHampers::route('/'),
-            'create' => Pages\CreateHamper::route('/create'),
-            'edit' => Pages\EditHamper::route('/{record}/edit'),
-        ];
     }
 }
