@@ -16,7 +16,7 @@
                         <div class="ms-featured-collection-item group relative">
                             <div
                                 class="ms-featured-collection-bg rounded-xl overflow-hidden aspect-h-1 aspect-w-1 bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 mx-4 my-4">
-                                <img src="{{ asset('storage'.$hamper->thumbnail) }}"
+                                <img src="{{ asset('storage'.$hamper->media->first()->path) }}"
                                     alt=""
                                     class="block h-full w-5/6 object-contain object-center mx-auto rounded-xl overflow-hidden lg:h-full lg:w-5/6">
                             </div>
