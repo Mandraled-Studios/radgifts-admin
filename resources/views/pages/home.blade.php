@@ -181,7 +181,7 @@
             <div class="px-4 py-4 border border-solid border-gray-300">
                 <h4 class="text-primary font-semibold text-lg lg:text-xl mb-4"> Sai Prasanna </h4>
                 <p class="mb-6"> Rad Gifts was our choice for providing onboarding gifts to our new employees and I was extremely impressed by their level of service. Their attention to detail was exceptional, and they helped us choose the ideal gifts for our staff. The quality of their products was outstanding, and I would highly recommend them to anyone seeking a reliable and top-notch corporate gifting vendor. Overall, we were extremely pleased with our experience with Rad Gifts and their exceptional service.</p>
-                <img class="h-12" src="{{ asset('images/clients/Zipstack.jpg') }}" alt="Zipstack Logo">
+                <img class="h-12" src="{{ asset('images/clients/zipstack.jpg') }}" alt="Zipstack Logo">
                 <p class="uppercase text-gray-500 font-thin"> Zipstack Pvt Ltd </p>
             </div>
             <div class="px-4 py-4 border border-solid border-gray-300">
@@ -190,7 +190,7 @@
                     Their ideas are unique and they customise based on our need. They understand our requirements and come up with more options for us with flexibility. Finally, The products are amazing and exceeded our expectations.
                     Keep up your good work, Team.
                     I would highly recommend RAD gifts for corporate gifting </p>
-                <img class="h-8" src="{{ asset('images/clients/Infoview.jpg') }}" alt="Infoview Logo">
+                <img class="h-8" src="{{ asset('images/clients/infoview.jpg') }}" alt="Infoview Logo">
                 <p class="uppercase text-gray-500 font-thin"> Infoview Pvt Ltd </p>
             </div>
         </div>

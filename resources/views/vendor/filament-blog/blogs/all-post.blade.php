@@ -6,7 +6,7 @@
             </h3>
         </header>
     </section>
-    <section class="pb-16 pt-8">
+    <section class="pb-16 pt-16">
         <div class="container mx-auto">
             <div class="grid gap-x-14 gap-y-14 sm:grid-cols-3">
                 @forelse ($posts as $post)
