@@ -57,10 +57,12 @@ class Hamper extends Model
         return $this->belongsToMany(Collection::class);
     }
 
+    /*
     public function orders(): BelongsToMany
     {
         return $this->belongsToMany(Order::class);
     }
+    */
 
     public function variantAttributes(): HasMany
     {
