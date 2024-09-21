@@ -16,11 +16,11 @@
                             @if (count($work->media) > 0)
                                 <img src="{{ '/storage/'.$work->media->first()->path}}"
                                     alt="{{ $work->title }}"
-                                    class="block h-full object-contain object-center mx-auto lg:h-full">
+                                    class="block h-full object-contain object-center mx-auto lg:h-full rounded-lg overflow-hidden">
                             @else
                                 <img src="{{ asset('/images/static/default-work.jpg') }}"
                                     alt="{{ $work->title }}"
-                                    class="block h-full object-contain object-center mx-auto lg:h-full">
+                                    class="block h-full object-contain object-center mx-auto lg:h-full rounded-lg overflow-hidden">
                             @endif
                             
                         </div>
