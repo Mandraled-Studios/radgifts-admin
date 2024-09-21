@@ -41,13 +41,13 @@
                         <x-nav-link class="px-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
                                 <g id="Group_230" data-name="Group 230" transform="translate(0 0)">
-                                <path id="Path_6" data-name="Path 6" d="M30.135,60.912a1.348,1.348,0,1,0,1.348,1.348,1.348,1.348,0,0,0-1.348-1.348" transform="translate(-12.545 -56.805)" fill="#111"/>
-                                <path id="Path_7" data-name="Path 7" d="M18.59,63.572a5.664,5.664,0,1,0,5.664,5.665,5.671,5.671,0,0,0-5.664-5.665m0,9.293a3.628,3.628,0,1,1,3.628-3.628,3.633,3.633,0,0,1-3.628,3.628" transform="translate(-6.995 -57.736)" fill="#111"/>
-                                <path id="Path_8" data-name="Path 8" d="M19.893,77.594H10.711A6.917,6.917,0,0,1,3.8,70.685V61.5a6.917,6.917,0,0,1,6.909-6.909h9.182A6.916,6.916,0,0,1,26.8,61.5v9.183a6.916,6.916,0,0,1-6.909,6.909M10.711,56.758A4.749,4.749,0,0,0,5.967,61.5v9.183a4.749,4.749,0,0,0,4.745,4.745h9.182a4.75,4.75,0,0,0,4.745-4.745V61.5a4.75,4.75,0,0,0-4.745-4.745Z" transform="translate(-3.802 -54.594)" fill="#111"/>
+                                <path id="Path_6" data-name="Path 6" d="M30.135,60.912a1.348,1.348,0,1,0,1.348,1.348,1.348,1.348,0,0,0-1.348-1.348" transform="translate(-12.545 -56.805)" fill="#341D66"/>
+                                <path id="Path_7" data-name="Path 7" d="M18.59,63.572a5.664,5.664,0,1,0,5.664,5.665,5.671,5.671,0,0,0-5.664-5.665m0,9.293a3.628,3.628,0,1,1,3.628-3.628,3.633,3.633,0,0,1-3.628,3.628" transform="translate(-6.995 -57.736)" fill="#341D66"/>
+                                <path id="Path_8" data-name="Path 8" d="M19.893,77.594H10.711A6.917,6.917,0,0,1,3.8,70.685V61.5a6.917,6.917,0,0,1,6.909-6.909h9.182A6.916,6.916,0,0,1,26.8,61.5v9.183a6.916,6.916,0,0,1-6.909,6.909M10.711,56.758A4.749,4.749,0,0,0,5.967,61.5v9.183a4.749,4.749,0,0,0,4.745,4.745h9.182a4.75,4.75,0,0,0,4.745-4.745V61.5a4.75,4.75,0,0,0-4.745-4.745Z" transform="translate(-3.802 -54.594)" fill="#341D66"/>
                                 </g>
                             </svg>                          
                         </x-nav-link>
-                        <x-nav-link class="bg-primary-dark text-white px-4 py-2 rounded-full self-center">
+                        <x-nav-link class="bg-primary-dark text-white hover:bg-accent-dark hover:text-white px-4 py-2 rounded-full self-center">
                             <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.943" height="23" viewBox="0 0 22.943 23">
                                 <defs>
                                 <clipPath id="clip-path">

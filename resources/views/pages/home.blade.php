@@ -43,7 +43,7 @@
         </div>
     </section>
     <x-home-recent-works :works="$recentWorks" />
-    <x-home-featured-personal />
+    <x-home-featured-personal :featuredPersonal="$featuredPersonal" />
     <x-home-curation-steps />
     <section id="highlights" class="py-12">
         <div class="ms-container text-center lg:max-w-3xl lg:mx-auto">

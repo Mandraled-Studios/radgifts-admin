@@ -26,6 +26,7 @@ class Collection extends Model
         'slug',
         'is_active',
         'is_featured',
+        'corporate_hamper_flag'
     ];
 
     /**

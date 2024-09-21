@@ -52,14 +52,23 @@ class PagesController extends Controller
                 ['corporate_hamper_flag', 1],
                 ['is_featured', 1],
                 ['is_active', 1],
-            ])->limit(8)->get();
+            ])->latest()->limit(8)->get();
+
+        $featuredPersonal = Collection::where([
+                ['corporate_hamper_flag', 0],
+                ['is_active', 1],
+            ])->latest()->first();
         
-        $recentWorks = Work::where('is_active', 1)->latest()->limit(3)->get();
+        $recentWorks = Work::where([
+                ['is_active', 1],
+                ['is_featured', 1],
+            ])->latest()->limit(3)->get();
 
         if($request->q == "test") {
             return view('pages.home')->with([
                 'clients' => $clients,
                 'featuredCorporate' => $featuredCorporate,
+                'featuredPersonal' => $featuredPersonal,
                 'recentWorks' => $recentWorks
             ]); 
         } else {
