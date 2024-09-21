@@ -14,12 +14,12 @@
                         <div
                             class="aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80 mx-4 my-4">
                             @if (count($work->media) > 0)
-                                <img src="{{ $work->media->first()}}"
-                                    alt="Front of men&#039;s Basic Tee in black."
+                                <img src="{{ $work->media->first()->path}}"
+                                    alt="{{ $work->title }}"
                                     class="block h-full object-contain object-center mx-auto lg:h-full">
                             @else
                                 <img src="{{ asset('images/static/default-work.jpg') }}"
-                                    alt="Front of men&#039;s Basic Tee in black."
+                                    alt="{{ $work->title }}"
                                     class="block h-full object-contain object-center mx-auto lg:h-full">
                             @endif
                             
