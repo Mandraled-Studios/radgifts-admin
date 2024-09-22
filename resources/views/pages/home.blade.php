@@ -134,10 +134,10 @@
                     <img class="w-full h-40 mx-auto absolute -top-28 object-contain"
                         src="{{ asset('images/static/gift-stack.png') }}" alt="">
                 </div>
-                <div class="text-white">
+                <div class="text-white text-center md:text-left pt-12 pb-6 md:py-0">
                     <p class="uppercase"> We don't create hampers, <br /> we create joy! </p>
                 </div>
-                <div class="text-white">
+                <div class="text-white text-center md:text-left">
                     <a class="bg-white rounded-full px-6 py-3 text-accent hover:bg-primary hover:text-white"
                         href="{{ route('pages.contact') }}"> Curate Your Hamper </a>
                 </div>

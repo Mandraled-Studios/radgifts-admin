@@ -33,12 +33,12 @@
                         </x-nav-link>
                     </div>
                     <div class="flex space-x-2">
-                        <x-nav-link class="px-2">
+                        <x-nav-link href="https://www.linkedin.com/in/rad-gifts-770761236" class="px-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18.569" height="18.569" viewBox="0 0 18.569 18.569">
                                 <path id="Icon_akar-linkedin-fill" data-name="Icon akar-linkedin-fill" d="M9.9,9.47h3.448v1.718A3.956,3.956,0,0,1,17.03,9.312c3.668,0,4.539,1.966,4.539,5.574v6.682H17.855v-5.86c0-2.055-.5-3.213-1.761-3.213-1.754,0-2.483,1.249-2.483,3.212v5.861H9.9V9.47ZM3.529,21.411H7.243V9.312H3.529v12.1ZM7.775,5.367a2.349,2.349,0,0,1-.7,1.673A2.387,2.387,0,0,1,3,5.367a2.353,2.353,0,0,1,.7-1.674,2.4,2.4,0,0,1,3.377,0A2.357,2.357,0,0,1,7.775,5.367Z" transform="translate(-3 -3)" fill="#4c3278"/>
                             </svg>                              
                         </x-nav-link>
-                        <x-nav-link class="px-2">
+                        <x-nav-link href="https://www.instagram.com/radgifts_india/" class="px-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
                                 <g id="Group_230" data-name="Group 230" transform="translate(0 0)">
                                 <path id="Path_6" data-name="Path 6" d="M30.135,60.912a1.348,1.348,0,1,0,1.348,1.348,1.348,1.348,0,0,0-1.348-1.348" transform="translate(-12.545 -56.805)" fill="#341D66"/>
@@ -47,7 +47,7 @@
                                 </g>
                             </svg>                          
                         </x-nav-link>
-                        <x-nav-link class="bg-primary-dark text-white hover:bg-accent-dark hover:text-white px-4 py-2 rounded-full self-center">
+                        <x-nav-link href="https://wa.me/+919150241115" class="bg-primary-dark text-white hover:bg-accent-dark hover:text-white px-4 py-2 rounded-full self-center">
                             <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.943" height="23" viewBox="0 0 22.943 23">
                                 <defs>
                                 <clipPath id="clip-path">

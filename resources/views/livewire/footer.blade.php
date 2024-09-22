@@ -17,6 +17,9 @@
                 <li class="px-4 py-3 text-center">
                     <a class="text-white" href="{{ route('pages.contact') }}">Contact Us</a>
                 </li>
+                <li class="px-4 py-3 text-center">
+                    <a class="text-white" href="{{ route('pages.contact.faq') }}">FAQs</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -26,22 +29,16 @@
                 <p class="uppercase text-lg text-white mb-4 font-bold"> Corporate Gifts </p>
                 <div class="md:pr-6 grid grid-cols-2 gap-2">
                     <ul class="text-white text-sm">
-                        <li><a href="{{ route('pages.corporate') }}"> Bespoke Collections </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Birthday / Anniversary  </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Merchandise </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Promotional </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Premium Gifts </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> On Boarding </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Festive </a></li>
+                        <li class="mb-1"><a href="{{ route('pages.corporate') }}"> Rewards & Recognition </a></li>
+                        <li class="mb-1"><a href="{{ route('pages.corporate') }}"> Merchandise </a></li>
+                        <li class="mb-1"><a href="{{ route('pages.corporate') }}"> Occasions &amp; Events </a></li>
+                        <li class="mb-1"><a href="{{ route('pages.corporate') }}"> Packaging </a></li>
                     </ul>
                     <ul class="text-white text-sm">
-                        <li><a href="{{ route('pages.corporate') }}"> Eco Friendly </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Rewards & Recognition  </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Gift Vouchers </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> 24 Hours Gifts </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Gourmet </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Custome Packaging </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Gratitude / Wellness </a></li>
+                        <li class="mb-1"><a href="{{ route('pages.corporate') }}"> Bespoke Collections </a></li>
+                        <li class="mb-1"><a href="{{ route('pages.corporate') }}"> On Boarding </a></li>
+                        <li class="mb-1"><a href="{{ route('pages.corporate') }}"> Festive </a></li>
+                        <li class="mb-1"><a href="{{ route('pages.corporate') }}"> Eco-Friendly </a></li>
                     </ul>
                 </div>
             </div>
@@ -49,27 +46,24 @@
                 <p class="uppercase text-lg text-white mb-4 font-bold"> Personal Gifts </p>
                 <div class="md:pr-6 grid grid-cols-2 gap-2">
                     <ul class="text-white text-sm">
-                        <li><a href="{{ route('pages.corporate') }}"> Birthday </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Wedding  </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Mother's Day </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Father's Day </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Children's Day </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Women's Day </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Valentine's Day </a></li>
+                        <li><a href="{{ route('pages.personal') }}"> Royal Emperor </a></li>
+                        <li><a href="{{ route('pages.personal') }}"> Trees of Life Plate  </a></li>
+                        <li><a href="{{ route('pages.personal') }}"> Vaccuum Flask Set </a></li>
+                        <li><a href="{{ route('pages.personal') }}"> Customized Wooden Gift Box </a></li>
                     </ul>
                     <ul class="text-white text-sm">
-                        <li><a href="{{ route('pages.corporate') }}"> Festive </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Halloween  </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Return Gifts </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> House Warming </a></li>
-                        <li><a href="{{ route('pages.corporate') }}"> Premium Gifts </a></li>
+                        <li><a href="{{ route('pages.personal') }}"> Decorative Lamp </a></li>
+                        <li><a href="{{ route('pages.personal') }}"> Dancing Doll & Wood Dry Fruit Jar  </a></li>
+                        <li><a href="{{ route('pages.personal') }}"> Festive Gift Hamper </a></li>
+                        <li><a href="{{ route('pages.personal') }}"> Premium Kit </a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-column-3 mb-8 px-1 lg:px-2 xl:px-3 2xl:px-4">
                 <p class="uppercase text-lg text-white mb-4 font-bold"> Newsletter </p>
                 <p class="text-white"> Subscribe to stay updated about the latest offers we have. </p>
-                <form action="">
+                <form action="{{route('newsletter')}}" method="POST">
+                    @csrf
                     <input type="text" name="name" placeholder="Name" id="name-field" class="block w-full mb-2 bg-transparent border-t-0 border-x-0 border-solid border-b border-white">
                     <input type="email" name="email" placeholder="Email" id="email-field" class="block w-full mb-2 bg-transparent border-t-0 border-x-0 border-solid border-b border-white">
                     <input type="submit" value="Subscribe" class="mt-4 block px-6 py-2 uppercase border-none bg-white text-primary rounded-full">
@@ -87,10 +81,10 @@
                     <a class="text-white" href="mailto:info@radgifts.in">  info@radgifts.in </a>
                 </div>
                 <div class="mt-2 flex item-center">
-                    <a class="mr-2" href=""> <img style="margin-top:2px;" src="{{ asset('images/icons/whatsapp.svg') }}" alt="whatsapp icon"> </a>
-                    <a class="mr-2" href=""> <img src="{{ asset('images/icons/instagram.svg') }}" alt="instagram icon"> </a>
-                    <a class="mr-2" href=""> <img src="{{ asset('images/icons/linkedin.svg')}}" alt="linkedin icon"> </a>
-                    <a class="mr-2" href=""> <img src="{{ asset('images/icons/twitter-x.svg')}}" alt="x icon"> </a>
+                    <a class="mr-2" href="https://wa.me/+919150241115"> <img style="margin-top:2px;" src="{{ asset('images/icons/whatsapp.svg') }}" alt="whatsapp icon"> </a>
+                    <a class="mr-2" href="https://www.instagram.com/radgifts_india/"> <img src="{{ asset('images/icons/instagram.svg') }}" alt="instagram icon"> </a>
+                    <a class="mr-2" href="https://www.linkedin.com/in/rad-gifts-770761236"> <img src="{{ asset('images/icons/linkedin.svg')}}" alt="linkedin icon"> </a>
+                    <a class="mr-2" href="https://x.com/radgifts_india"> <img src="{{ asset('images/icons/twitter-x.svg')}}" alt="x icon"> </a>
                 </div>
             </div>
         </nav>

@@ -135,10 +135,10 @@
                     </div>
                 </section>
     
-                <form class="mt-6">  
+                <div class="mt-6">  
                     <p> Make a call or email to curate similar hamper with us: </p> 
                     <div class="mt-4 flex gap-4">
-                        <button type="submit" class="flex max-w-xs flex-1 items-center justify-center rounded-full border border-transparent bg-primary px-8 py-3 text-base font-medium text-white hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full">
+                        <a href="https://wa.me/+919150241115" class="flex max-w-xs flex-1 items-center justify-center rounded-full border border-transparent bg-primary px-8 py-3 text-base font-medium text-white hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full">
                             <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.943" height="23" viewBox="0 0 22.943 23">
                                 <defs>
                                 <clipPath id="clip-path">
@@ -153,15 +153,15 @@
                                 </g>
                             </svg>
                             Whatsapp
-                        </button>
-                        <button type="submit" class="flex max-w-xs flex-1 items-center justify-center rounded-full border border-transparent bg-accent px-8 py-3 text-base font-medium text-white hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full">
+                        </a>
+                        <a href="mailto:info@radgifts.in" class="flex max-w-xs flex-1 items-center justify-center rounded-full border border-transparent bg-accent px-8 py-3 text-base font-medium text-white hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full">
                             <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="18" height="14.4" viewBox="0 0 18 14.4">
                                 <path id="Icon_material-round-email" data-name="Icon material-round-email" d="M19.2,6H4.8A1.8,1.8,0,0,0,3.009,7.8L3,18.6a1.805,1.805,0,0,0,1.8,1.8H19.2A1.805,1.805,0,0,0,21,18.6V7.8A1.805,1.805,0,0,0,19.2,6Zm-.36,3.825L12.477,13.8a.91.91,0,0,1-.954,0L5.16,9.825a.765.765,0,1,1,.81-1.3L12,12.3l6.03-3.771a.765.765,0,1,1,.81,1.3Z" transform="translate(-3 -6)" fill="#fff"/>
                             </svg>                              
                             Email
-                        </button>
+                        </a>
                     </div>
-                </form>
+                </div>
     
             </div>
         </div>

@@ -7,7 +7,7 @@
     <div class="bg-primary-light py-12">
         <div class="ms-container">
             <div class="lg:max-w-3xl lg:mx-auto text-center">
-                <h4 class="text-primary font-light uppercase text-lg"> Featured Collections </h4>
+                <h3 class="text-primary font-medium uppercase text-lg"> Featured Collections </h3>
             </div>
 
             <!-- Product Grid -->
@@ -23,7 +23,7 @@
                                         alt="{{ $fc->title }}"
                                         class="block h-full w-full object-cover object-center mx-auto">
                                 </div>
-                                <div class="px-4 py-4">
+                                <div class="px-4 pt-1 pb-4">
                                     <p class="text-lg uppercase font-semibold text-gray-800 mb-2">
                                         <a href="#">
                                             <span aria-hidden="true" class="absolute inset-0"></span>

@@ -30,7 +30,7 @@
                 ];
             @endphp
             @for ($k=0; $k<=3; $k++)
-                <div class="p-3 bg-white rounded-md shadow-lg relative">
+                <div class="p-3 bg-white cursor-pointer hover:bg-gradient-to-r hover:from-primary/10 hover:via-transparent hover:to-primary/10 rounded-md shadow-lg relative">
                     <div class="bg-orange-500 text-white absolute top-0 left-4 px-2 pt-4 pb-2 text-xl lg:text-2xl font-bold"> {{ $k+1 }} </div>
                     <img class="w-full" src="{{asset($curationSteps[$k]['image'])}}" alt="">
                     <h3 class="text-primary font-semibold text-lg"> {{ $curationSteps[$k]['title'] }}</h3>

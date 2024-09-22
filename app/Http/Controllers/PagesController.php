@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Newsletter;
 use App\Models\Work;
 use App\Models\Collection;
 use Illuminate\Http\Request;
@@ -77,12 +78,27 @@ class PagesController extends Controller
     }
 
     public function corporateGifting(Request $request) {
-        $corporate = Collection::where('corporate_flag', 1)->get();
+        $corporate = Collection::where('corporate_hamper_flag', 1)->get();
         
         if($request->q == "test") {
-            return view('pages.corporate')->with([
-                'corporate' => $corporate,
-            ]);
+            // return view('pages.corporate')->with([
+            //     'corporate' => $corporate,
+            // ]);
+            return Redirect::to('/under-maintenance', 301); 
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
+        
+    }
+
+    public function personalGifting(Request $request) {
+        $corporate = Collection::where('corporate_hamper_flag', 0)->get();
+        
+        if($request->q == "test") {
+            // return view('pages.personal')->with([
+            //     'corporate' => $corporate,
+            // ]);
+            return Redirect::to('/under-maintenance', 301); 
         } else {
             return Redirect::to('/under-maintenance', 301); 
         }
@@ -154,7 +170,7 @@ class PagesController extends Controller
     public function newsletter(Request $request) {
         $data = $request->validate([
             'name' => 'required|min:3|max:64',
-            'email' => 'required|email|unique:subscriptions,email',
+            'email' => 'required|email|unique:newsletters,email',
         ]);
 
         $name = $data['name'];
@@ -175,7 +191,7 @@ class PagesController extends Controller
         $headers .= 'From: <webadmin@radgifts.in>' . "\r\n";
         $headers .= 'CC: mandraledstudios@gmail.com' . "\r\n";
 
-        Subscription::create($data);
+        Newsletter::create($data);
 
         if(mail($to, $subject, $message, $headers)) {
             return redirect()->back()->with([

@@ -17,7 +17,7 @@
                     Make corporate and personal gifting effortless with our diverse collections and creative customizations
                 </p>
                 <div class="mt-10 flex justify-center items-center gap-x-6">
-                    <a href="#"
+                    <a href="{{ route('pages.contact') }}"
                         class="rounded-full text-white px-6 py-3 text-lg lg:text-xl font-semibold bg-accent shadow-sm hover:bg-white/90 hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                         Know More
                     </a>

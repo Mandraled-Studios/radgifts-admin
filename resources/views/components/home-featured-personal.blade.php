@@ -12,7 +12,7 @@
 
             <div class="mt-2 grid grid-cols-1 gap-x-2 gap-y-4 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-2">
                 @if($featuredPersonal)
-                    @foreach ($featuredPersonal->hampers as $hamper)
+                    @foreach ($featuredPersonal->hampers()->latest()->limit(8)->get() as $hamper)
                         <div class="ms-featured-collection-item group relative">
                             <div
                                 class="ms-featured-collection-bg rounded-xl overflow-hidden aspect-h-1 aspect-w-1 bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 mx-4 my-4">
