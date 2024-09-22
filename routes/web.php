@@ -12,6 +12,8 @@ Route::get('/our-works/{work}', [PagesController::class, 'workDetails'])->name('
 Route::get('/about', [PagesController::class, 'about'])->name('pages.about');
 Route::get('/contact-us', [PagesController::class, 'contact'])->name('pages.contact');
 Route::get('/contact-us/faq', [PagesController::class, 'faq'])->name('pages.contact.faq');
+Route::post('/contact-us/mail', [PagesController::class, 'mail'])->name('contact.mail');
+Route::post('/newsletter', [PagesController::class, 'newsletter'])->name('newsletter');
 
 Route::middleware([
     'auth:sanctum',

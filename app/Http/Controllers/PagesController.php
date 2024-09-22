@@ -76,22 +76,6 @@ class PagesController extends Controller
         }
     }
 
-    public function staticPage($static, Request $request) {
-        $about = '';
-        switch($static) {
-            case 'about':    $pageContent = $about;
-                             break;
-            case 'articles': $pageContent = "<h1> Articles </h1>"; 
-                             break;
-            case 'contact':  $pageContent = "<h1> Contact </h1>"; 
-                             break;
-        }
-
-        return view('pages.static')->with([
-            'pageContent' => $pageContent,
-        ]);
-    }
-
     public function corporateGifting(Request $request) {
         $corporate = Collection::where('corporate_flag', 1)->get();
         
@@ -140,15 +124,15 @@ class PagesController extends Controller
     public function contact(Request $request) {
         if($request->q == "test") {
             $company = (object) [
-                'phone' => 'images/clients/4700-bc.jpg',
-                'email' => 'images/clients/4700-bc.jpg',
+                'phone' => '+919150241115',
+                'email' => 'info@radgifts.in',
                 'address' => (object) [
-                    'building_no' => '',
-                    'street' => '',
-                    'area' => '',
-                    'city' => '',
-                    'state' => '',
-                    'zipcode' => '',
+                    'building_no' => '55/6',
+                    'street' => 'VN Doss Rd, Mount Road',
+                    'area' => 'Pudupakkam, Triplicane',
+                    'city' => 'Chennai',
+                    'state' => 'Tamil Nadu',
+                    'zipcode' => '600002',
                 ]
             ];
 
@@ -164,6 +148,81 @@ class PagesController extends Controller
             return view('pages.faq');
         } else {
             return Redirect::to('/under-maintenance', 301); 
+        }
+    }
+
+    public function newsletter(Request $request) {
+        $data = $request->validate([
+            'name' => 'required|min:3|max:64',
+            'email' => 'required|email|unique:subscriptions,email',
+        ]);
+
+        $name = $data['name'];
+        $email = $data['email'];
+    
+        $message = "<h1> New Newsletter Subscription From ".$name."</h1>";
+        $message .= "<table width='100%'> <tr> <td>";
+        $message .= "Email: </td> <td> ".$email."</td></tr> </table>";
+        
+        $to = "info@radgifts.in";
+        $subject = "Newsletter Subscription for radgifts.in - ".$name;
+
+        // Always set content-type when sending HTML email
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        
+        // More headers
+        $headers .= 'From: <webadmin@radgifts.in>' . "\r\n";
+        $headers .= 'CC: mandraledstudios@gmail.com' . "\r\n";
+
+        Subscription::create($data);
+
+        if(mail($to, $subject, $message, $headers)) {
+            return redirect()->back()->with([
+                    "message" => "sent",
+                    "q" => "test",
+                ]);
+        } else {
+            return redirect()->back()->with([
+                    "message" => "failed",
+                    "q" => "test",
+                ]);
+        }
+    }
+
+    public function mail(Request $request) {
+        $name = $request->name;
+        $email = $request->email;
+        $phone = $request->phone;
+        $city = $request->city;
+        $message = "<h1> New Query From ".$name."</h1>";
+        $message .= "<table width='100%'> <tr> <td>";
+        $message .= "Email: </td> <td> ".$email."</td></tr> <tr><td>";
+        $message .= "Phone: </td> <td> ".$phone."</td></tr> <tr><td>";
+        $message .= "City: </td> <td> ".$city."</td></tr> <tr><td>";
+        $message .= "Message: </td> <td> ".$request->message."</td></tr> </table>";
+        
+        $to = "info@radgifts.in";
+        $subject = "Query from website - ".$name;
+
+        // Always set content-type when sending HTML email
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        
+        // More headers
+        $headers .= 'From: <webadmin@radgifts.in>' . "\r\n";
+        $headers .= 'CC: mandraledstudios@gmail.com' . "\r\n";
+        
+        if(mail($to, $subject, $message, $headers)) {
+            return redirect(route('pages.contact'))->with([
+                    "message" => "sent",
+                    "q" => "test",
+                ]);
+        } else {
+            return redirect(route('pages.contact'))->with([
+                    "message" => "failed",
+                    "q" => "test",
+                ]);
         }
     }
 }
