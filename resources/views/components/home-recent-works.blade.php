@@ -39,7 +39,7 @@
                                 </a>
                             </p>
                             <p class="text-sm font-medium text-gray-900">
-                                {!! implode(' ', array_slice(explode(' ', $work->description), 0, 12)) !!} ... (Read More)
+                                {!! implode(' ', array_slice(explode(' ', $work->description), 0, 12)) !!} ... <span class="text-accent-dark font-semibold underline">(Read More)</span>
                             </p>
                         </div>
                     </div>

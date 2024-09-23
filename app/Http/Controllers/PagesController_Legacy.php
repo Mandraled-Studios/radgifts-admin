@@ -8,7 +8,7 @@ use App\Models\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
-class PagesController extends Controller
+class PagesController_Legacy extends Controller
 {
 
     public function maintenance() {
@@ -65,74 +65,106 @@ class PagesController extends Controller
                 ['is_featured', 1],
             ])->latest()->limit(3)->get();
 
-        return view('pages.home')->with([
-            'clients' => $clients,
-            'featuredCorporate' => $featuredCorporate,
-            'featuredPersonal' => $featuredPersonal,
-            'recentWorks' => $recentWorks
-        ]); 
+        if($request->q == "test") {
+            return view('pages.home')->with([
+                'clients' => $clients,
+                'featuredCorporate' => $featuredCorporate,
+                'featuredPersonal' => $featuredPersonal,
+                'recentWorks' => $recentWorks
+            ]); 
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
     }
 
     public function corporateGifting(Request $request) {
         $corporate = Collection::where('corporate_hamper_flag', 1)->get();
         
-        // return view('pages.corporate')->with([
-        //     'corporate' => $corporate,
-        // ]);
-        return Redirect::to('/under-maintenance', 301); 
+        if($request->q == "test") {
+            // return view('pages.corporate')->with([
+            //     'corporate' => $corporate,
+            // ]);
+            return Redirect::to('/under-maintenance', 301); 
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
         
     }
 
     public function personalGifting(Request $request) {
         $corporate = Collection::where('corporate_hamper_flag', 0)->get();
         
-        // return view('pages.personal')->with([
-        //     'corporate' => $corporate,
-        // ]);
-        return Redirect::to('/under-maintenance', 301); 
+        if($request->q == "test") {
+            // return view('pages.personal')->with([
+            //     'corporate' => $corporate,
+            // ]);
+            return Redirect::to('/under-maintenance', 301); 
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
         
     }
 
     public function ourWorks(Request $request) {
         $works = Work::all();
 
-        return view('pages.ourworks')->with([
-            'works' => $works
-        ]);
+        if($request->q == "test") {
+            return view('pages.ourworks')->with([
+                'works' => $works
+            ]);
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
     }
 
     public function workDetails($work, Request $request) {
         $chosenWork = Work::where('slug', $work)->first();
 
-        return view('pages.workDetail')->with([
-            'work' => $chosenWork 
-        ]);
+        if($request->q == "test") {
+            return view('pages.workDetail')->with([
+                'work' => $chosenWork 
+            ]);
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
     }
 
     public function about(Request $request) {
-        return view('pages.about');
+        if($request->q == "test") {
+            return view('pages.about');
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
     }
 
     public function contact(Request $request) {
-        $company = (object) [
-            'phone' => '+919150241115',
-            'email' => 'info@radgifts.in',
-            'address' => (object) [
-                'building_no' => '55/6',
-                'street' => 'VN Doss Rd, Mount Road',
-                'area' => 'Pudupakkam, Triplicane',
-                'city' => 'Chennai',
-                'state' => 'Tamil Nadu',
-                'zipcode' => '600002',
-            ]
-        ];
+        if($request->q == "test") {
+            $company = (object) [
+                'phone' => '+919150241115',
+                'email' => 'info@radgifts.in',
+                'address' => (object) [
+                    'building_no' => '55/6',
+                    'street' => 'VN Doss Rd, Mount Road',
+                    'area' => 'Pudupakkam, Triplicane',
+                    'city' => 'Chennai',
+                    'state' => 'Tamil Nadu',
+                    'zipcode' => '600002',
+                ]
+            ];
 
-        return view('pages.contact')->with([
-            'company' => $company,
-        ]);
+            return view('pages.contact')->with([
+                'company' => $company,
+            ]);
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
     }
     public function faq(Request $request) {
-        return view('pages.faq');
+        if($request->q == "test") {
+            return view('pages.faq');
+        } else {
+            return Redirect::to('/under-maintenance', 301); 
+        }
     }
 
     public function newsletter(Request $request) {
@@ -164,10 +196,12 @@ class PagesController extends Controller
         if(mail($to, $subject, $message, $headers)) {
             return redirect()->back()->with([
                     "message" => "sent",
+                    "q" => "test",
                 ]);
         } else {
             return redirect()->back()->with([
                     "message" => "failed",
+                    "q" => "test",
                 ]);
         }
     }
@@ -198,10 +232,12 @@ class PagesController extends Controller
         if(mail($to, $subject, $message, $headers)) {
             return redirect(route('pages.contact'))->with([
                     "message" => "sent",
+                    "q" => "test",
                 ]);
         } else {
             return redirect(route('pages.contact'))->with([
                     "message" => "failed",
+                    "q" => "test",
                 ]);
         }
     }
