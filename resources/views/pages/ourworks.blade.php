@@ -2,8 +2,8 @@
     <section id="our-works" class="py-20">
         <div class="ms-container">
             <div class="lg:max-w-3xl lg:mx-auto text-center">
-                <span class="ms-super-header"> Curated Hampers For Our Clients </span>
-                <h2 class="text-primary font-semibold text-xl md:text-2xl mb-4"> Our Past Works </h2>
+                <span class="ms-super-header"> </span>
+                <h2 class="text-primary font-semibold text-xl md:text-2xl mb-4"> Our Past Work </h2>
                 <p class="mb-4">
                     Be it a festive season, a corporate gathering, or a milestone celebration, we have ideal gift choices for all occasions. From ready-to-go gift baskets and sets to tailor-made gifts designed for businesses, we offer a diverse range of options to cater to various needs. 
                 </p>

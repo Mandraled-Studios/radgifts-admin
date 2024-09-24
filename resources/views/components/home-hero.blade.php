@@ -5,7 +5,7 @@
                 <div class="relative px-2 pt-2 sm:pt-4 md:pl-4 md:pr-0">
                     <div class="pointer-events-none" aria-hidden="true">
                         <img class="mx-auto mb-2" src="{{ asset('images/static/homepage-hero-corporate.png') }}" alt="curated gift hampers">
-                        <p class="text-lg text-primary font-bold text-center"> Corporate Gifting </p>
+                        <p class="text-lg text-white lg:text-primary font-bold text-center"> Corporate Gifting </p>
                     </div>
                 </div>
             </div>

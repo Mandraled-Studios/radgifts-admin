@@ -59,7 +59,7 @@
                         <h1 class="text-2xl lg:text-3xl text-primary font-bold tracking-tight"> {{ $work->title }} </h1>
                     </div>
                     @if ($work->thumbnail)
-                        <img class="w-24 h-12 object-contain object-center grow-0 shrink-0" src="{{ $work->thumbnail }}" alt="">
+                        <img class="w-24 h-12 object-contain object-center grow-0 shrink-0" src="{{ '/storage/'.$work->thumbnail }}" alt="">
                     @else
                         <img class="w-24 h-12 object-contain object-center grow-0 shrink-0" src="{{ asset('images/static/default-client-logo.png') }}" alt="">
                     @endif

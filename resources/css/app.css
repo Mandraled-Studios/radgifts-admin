@@ -773,7 +773,7 @@ video {
 }
 
 .ms-super-header {
-    @apply relative uppercase text-primary;
+    @apply block relative uppercase text-primary;
     @apply font-thin;
 }
 .ms-super-header::before {
