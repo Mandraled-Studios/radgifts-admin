@@ -10,7 +10,7 @@
             </div>
             <div class="mt-2 grid grid-cols-1 gap-x-2 gap-y-4 sm:grid-cols-2 sm:mx-auto sm:justify-center lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-2">
                 @foreach ($works as $work)
-                    <div class="group bg-white relative">
+                    <div class="group bg-white relative cursor-pointer">
                         <div
                             class="aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80 mx-4 my-4">
                             @if (count($work->media) > 0)
@@ -31,7 +31,12 @@
                                     {{ $work->title }}
                                 </a>
                             </p>
+                            {{-- 
                             <p class="text-center text-gray-900"> {{ $work->excerpt }} </p>
+                            --}}
+                            <p class="text-center py-4">
+                                <a class="text-center px-2 py-1 rounded-full bg-primary text-white hover:bg-primary-dark"> Know More </a>
+                            </p>
                         </div>
                     </div>
                 @endforeach

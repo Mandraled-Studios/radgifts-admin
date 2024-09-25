@@ -815,7 +815,7 @@ video {
  }
  .ms-carousel-inner img { 
     height: 80px;
-    margin-right: 12px;
+    margin-right: 8px;
  }
 
  @keyframes ms-infinite-scroll {

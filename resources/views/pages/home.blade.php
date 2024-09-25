@@ -1,19 +1,19 @@
 <x-app-layout>
     <x-home-hero />
-    <section id="clientele" class="bg-white py-6">
+    <section id="clientele" class="bg-gray-100 py-6 mb-6">
         <div class="ms-container">
             <h2 class="text-center text-dark-grey text-lg lg:text-xl mb-6"> Trusted & Loved by 50+ Clientele </h2>
         </div>
 
-        <div id="ms-infinite-carousel" class="mb-10">
+        <div id="ms-infinite-carousel" class="mb-8">
             <div class="ms-carousel-inner">
                 @foreach ($clients as $client)
-                    <img class="h-12 object-contain object-center" src="{{ asset($client->logo) }}" alt="">
+                    <img class="h-12 object-contain object-center border-2 border-primary shadow-lg" src="{{ asset($client->logo) }}" alt="">
                 @endforeach
             </div>
             <div class="ms-carousel-inner">
                 @foreach ($clients as $client)
-                    <img class="h-12 object-contain object-center" src="{{ asset($client->logo) }}" alt="">
+                    <img class="h-12 object-contain object-center border-2 border-primary shadow-lg" src="{{ asset($client->logo) }}" alt="">
                 @endforeach
             </div>
         </div>
@@ -152,7 +152,7 @@
                     corporate gifting needs. Worked on multiple occasions for different types of gifting needs for our
                     company and really appreciated their flexibility to work around our needs, creative collaboration
                     and they ended up exceeding expectations every time. Highly recommended. </p>
-                <img class="h-12" src="{{ asset('images/clients/facilio.jpg') }}" alt="Facilio Logo">
+                <img class="h-12" src="https://radgifts.in/storage/media/client-logo-facilio.jpg" alt="Facilio Logo">
             </div>
             <div class="carousel-item px-4 py-4 border border-solid border-gray-300">
                 <h4 class="text-primary font-semibold text-lg lg:text-xl mb-4"> Siddharth Rangan </h4>
@@ -160,24 +160,24 @@
                     corporate gift and they suggested multiple options. We had an excellent experience with them. Below
                     is my rating for their service. Quality: 5/5, Turn around time : 5/5, Delivery: very smooth,
                     delivery process 5/5. Overall I would rate 5* for Rad team </p>
-                <img class="h-12" src="{{ asset('images/clients/Miratech.jpg') }}" alt="Miratech Logo">
+                <img class="h-12" src="https://radgifts.in/storage/media/client-logo-miratech.jpg" alt="Miratech Logo">
             </div>
             <div class="carousel-item px-4 py-4 border border-solid border-gray-300">
                 <h4 class="text-primary font-semibold text-lg lg:text-xl mb-4"> Vidhya Madhusudan </h4>
                 <p class="mb-6"> Our team is super happy with the Diwali hamper . Though it was last minute order you
                     made sure everything was perfect. Thank you so much . Will strongly recommend your work. And you'll
                     be Rocketlane's fav vendor. </p>
-                <img class="h-12" src="{{ asset('images/clients/Rocketlane.jpg') }}" alt="Rocketlane Logo">
+                <img class="h-12" src="https://radgifts.in/storage/media/client-logo-rocketlane.jpg" alt="Rocketlane Logo">
             </div>
             <div class="carousel-item px-4 py-4 border border-solid border-gray-300">
                 <h4 class="text-primary font-semibold text-lg lg:text-xl mb-4"> Swathi </h4>
                 <p class="mb-6"> I had a fantastic experience with Rad gifts. Sobna was professional and helpful. The products were high-quality and unique. The vendor was reliable and met tight deadlines. Sobna provided multiple samples for testing. We'll definitely use Rad gifts again for our corporate gifting needs. </p>
-                <img class="h-12" src="{{ asset('images/clients/Next-Billion-AI.jpg') }}" alt="Next Billion AI Logo">
+                <img class="h-12" src="https://radgifts.in/storage/media/client-logo-next-billion-ai.jpg" alt="Next Billion AI Logo">
             </div>
             <div class="carousel-item px-4 py-4 border border-solid border-gray-300">
                 <h4 class="text-primary font-semibold text-lg lg:text-xl mb-4"> Sai Prasanna </h4>
                 <p class="mb-6"> Rad Gifts was our choice for providing onboarding gifts to our new employees and I was extremely impressed by their level of service. Their attention to detail was exceptional, and they helped us choose the ideal gifts for our staff. The quality of their products was outstanding, and I would highly recommend them to anyone seeking a reliable and top-notch corporate gifting vendor. Overall, we were extremely pleased with our experience with Rad Gifts and their exceptional service.</p>
-                <img class="h-12" src="{{ asset('images/clients/zipstack.jpg') }}" alt="Zipstack Logo">
+                <img class="h-12" src="https://radgifts.in/storage/media/client-logo-zipstack.jpg" alt="Zipstack Logo">
             </div>
             <div class="carousel-item px-4 py-4 border border-solid border-gray-300">
                 <h4 class="text-primary font-semibold text-lg lg:text-xl mb-4"> Karthick Raj </h4>
@@ -185,7 +185,7 @@
                     Their ideas are unique and they customise based on our need. They understand our requirements and come up with more options for us with flexibility. Finally, The products are amazing and exceeded our expectations.
                     Keep up your good work, Team.
                     I would highly recommend RAD gifts for corporate gifting </p>
-                <img class="h-8" src="{{ asset('images/clients/infoview.jpg') }}" alt="Infoview Logo">
+                <img class="h-8" src="https://radgifts.in/storage/media/client-logo-infoview.jpg" alt="Infoview Logo">
             </div>
         </div>
         <a href="reviews" id="carouselPrev" class="carousel-control carousel-control-prev">
