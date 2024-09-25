@@ -112,6 +112,9 @@
         <div class="ms-container text-center">
             <span class="ms-super-header"> Check Our Recent Stories </span>
             <h2 class="text-primary font-semibold text-xl lg:text-2xl mb-6"> Trending From Instagram </h2>
+            <p class="text-center py-4">
+                <a href="https://www.instagram.com/radgifts_india" class="text-center px-3 py-2 rounded-full bg-primary text-white hover:bg-primary-dark"> VIEW RAD GIFTS ON INSTAGRAM </a>
+            </p>
             {{--
             <div class="py-6 grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-4">
                 @for ($l = 1; $l <= 8; $l++)
@@ -124,7 +127,6 @@
                 <div class="wbctB" data-val="rvc41"></div>
             </div>
             --}}
-            <x-insta-feed> </x-insta-feed>
         </div>
     </section>
     <section id="features" class="py-12">
