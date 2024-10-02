@@ -18,7 +18,7 @@
                     class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                     
                     @foreach ($corporate_collection->hampers as $hamper)
-                        <a href="/corporate-gifting/{{$hamper->slug}}" class="group">
+                        <a href="#{{$hamper->slug}}" class="group">
                             <div
                                 class="w-full h-80 overflow-hidden rounded-lg bg-gray-200 mb-3">
                                 <img src="{{asset('storage/'.$hamper->media->first()->path)}}"
