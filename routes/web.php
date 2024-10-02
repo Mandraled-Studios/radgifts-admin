@@ -6,6 +6,7 @@ use App\Http\Controllers\PagesController;
 Route::get('/under-maintenance', [PagesController::class, 'maintenance'])->name('maintenance');
 Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/corporate-gifting', [PagesController::class, 'corporateGifting'])->name('pages.corporate');
+Route::get('/corporate-gifting/{collection}', [PagesController::class, 'corporateHampers'])->name('pages.corporate.hampers');
 Route::get('/personal-gifting', [PagesController::class, 'personalGifting'])->name('pages.personal');
 Route::get('/our-work', [PagesController::class, 'ourWorks'])->name('pages.works');
 Route::get('/our-work/{work}', [PagesController::class, 'workDetails'])->name('pages.works.details');

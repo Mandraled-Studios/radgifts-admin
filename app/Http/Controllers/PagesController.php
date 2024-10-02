@@ -81,12 +81,27 @@ class PagesController extends Controller
     }
 
     public function corporateGifting(Request $request) {
-        $corporate = Collection::where('corporate_hamper_flag', 1)->get();
+        $corporate_collections = Collection::where('corporate_hamper_flag', 1)->get();
         
-        // return view('pages.corporate')->with([
-        //     'corporate' => $corporate,
-        // ]);
-        return Redirect::to('/under-maintenance', 301); 
+        return view('pages.corporate-collections')->with([
+            'corporate_collections' => $corporate_collections,
+        ]);
+        
+        //return Redirect::to('/under-maintenance', 301); 
+        
+    }
+
+    public function corporateHampers($collection, Request $request) {
+        $corporate_collection = Collection::where([
+            ['corporate_hamper_flag', 1],
+            ['slug', $collection],
+        ])->first();
+        
+        return view('pages.corporate-collection-hampers')->with([
+            'corporate_collection' => $corporate_collection,
+        ]);
+        
+        //return Redirect::to('/under-maintenance', 301); 
         
     }
 
