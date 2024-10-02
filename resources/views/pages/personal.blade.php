@@ -21,7 +21,7 @@
                         <a href="#{{$gift->slug}}" class="group">
                             <div
                                 class="w-full h-80 overflow-hidden rounded-lg bg-gray-200 mb-3">
-                                <img src="storage/{{asset('storage/'.$gift->media->first()->path)}}"
+                                <img src="{{asset('storage/'.$gift->media->first()->path)}}"
                                     alt="{{$gift->title}}"
                                     class="h-full w-full mb-2 object-cover object-center group-hover:opacity-75">
                             </div>
