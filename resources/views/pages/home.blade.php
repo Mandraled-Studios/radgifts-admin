@@ -112,16 +112,28 @@
         <div class="ms-container text-center">
             <span class="ms-super-header"> Check Our Recent Stories </span>
             <h2 class="text-primary font-semibold text-xl lg:text-2xl mb-6"> Trending From Instagram </h2>
+            <div class="py-6 grid grid-cols-1 gap-x-2 gap-y-2 sm:mx-auto sm:grid-cols-2 sm:max-w-3xl lg:grid-cols-3 lg:max-w-4xl lg:gap-x-4 lg:gap-y-4 xl:max-w-5xl">
+                @foreach ($instaposts as $instapost)
+                    <a target="_blank" href="{{$instapost->post_url}}" class="block bg-gray-100 h-80 mx-auto">
+                        <img class="object-cover object-center" src="storage/{{$instapost->post_image}}" alt="">
+                    </a>
+                @endforeach
+            </div>
             <p class="text-center py-4">
-                <a href="https://www.instagram.com/radgifts_india" class="text-center px-3 py-2 rounded-full bg-primary text-white hover:bg-primary-dark"> VIEW RAD GIFTS ON INSTAGRAM </a>
+                <a href="https://www.instagram.com/radgifts_india" class="inline-flex items-center justify-center text-center px-5 py-3 rounded-full bg-primary text-white hover:bg-primary-dark"> 
+                    <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+                        <g id="Group_230" data-name="Group 230" transform="translate(0 0)">
+                        <path id="Path_6" data-name="Path 6" d="M30.135,60.912a1.348,1.348,0,1,0,1.348,1.348,1.348,1.348,0,0,0-1.348-1.348" transform="translate(-12.545 -56.805)" fill="#FFF"></path>
+                        <path id="Path_7" data-name="Path 7" d="M18.59,63.572a5.664,5.664,0,1,0,5.664,5.665,5.671,5.671,0,0,0-5.664-5.665m0,9.293a3.628,3.628,0,1,1,3.628-3.628,3.633,3.633,0,0,1-3.628,3.628" transform="translate(-6.995 -57.736)" fill="#FFF"></path>
+                        <path id="Path_8" data-name="Path 8" d="M19.893,77.594H10.711A6.917,6.917,0,0,1,3.8,70.685V61.5a6.917,6.917,0,0,1,6.909-6.909h9.182A6.916,6.916,0,0,1,26.8,61.5v9.183a6.916,6.916,0,0,1-6.909,6.909M10.711,56.758A4.749,4.749,0,0,0,5.967,61.5v9.183a4.749,4.749,0,0,0,4.745,4.745h9.182a4.75,4.75,0,0,0,4.745-4.745V61.5a4.75,4.75,0,0,0-4.745-4.745Z" transform="translate(-3.802 -54.594)" fill="#FFF"></path>
+                        </g>
+                    </svg>
+                    <span> 
+                        VIEW RAD GIFTS ON INSTAGRAM 
+                    </span>
+                </a>
             </p>
             {{--
-            <div class="py-6 grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-4">
-                @for ($l = 1; $l <= 8; $l++)
-                    <div class="bg-gray-100 px-4 py-4 h-80"></div>
-                @endfor
-            </div>
-            
             <div data-name="onstipe" class="wbctA" style="width:100%;height:100%;overflow:hidden;">
                 <script defer src="https://onstipe.com/web/js/webembed.js" type="text/javascript"></script>
                 <div class="wbctB" data-val="rvc41"></div>

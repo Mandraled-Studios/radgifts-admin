@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Newsletter;
 use App\Models\Work;
+use App\Models\Instapost;
 use App\Models\Collection;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -65,11 +66,17 @@ class PagesController extends Controller
                 ['is_featured', 1],
             ])->latest()->limit(3)->get();
 
+        $instaposts = Instapost::whereNull('deleted_at')
+                                    ->latest()
+                                    ->limit(9)
+                                    ->get();
+
         return view('pages.home')->with([
             'clients' => $clients,
             'featuredCorporate' => $featuredCorporate,
             'featuredPersonal' => $featuredPersonal,
-            'recentWorks' => $recentWorks
+            'recentWorks' => $recentWorks,
+            'instaposts' => $instaposts
         ]); 
     }
 
@@ -84,12 +91,14 @@ class PagesController extends Controller
     }
 
     public function personalGifting(Request $request) {
-        $corporate = Collection::where('corporate_hamper_flag', 0)->get();
+        $personal = Collection::where('corporate_hamper_flag', 0)->first();
+
+        $gifts = $personal->hampers;
         
-        // return view('pages.personal')->with([
-        //     'corporate' => $corporate,
-        // ]);
-        return Redirect::to('/under-maintenance', 301); 
+        return view('pages.personal')->with([
+            'gifts' => $gifts,
+        ]);
+        //return Redirect::to('/under-maintenance', 301); 
         
     }
 
@@ -97,7 +106,7 @@ class PagesController extends Controller
         $works = Work::all();
 
         return view('pages.ourworks')->with([
-            'works' => $works
+            'works' => $works,
         ]);
     }
 
