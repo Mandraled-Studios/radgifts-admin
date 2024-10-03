@@ -6,7 +6,7 @@
                 <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-b border-gray-200">
                     <p class="ms-super-header text-lg font-bold text-center"> </p>
                     <h1 class="text-3xl font-bold tracking-tight text-primary text-center">Corporate Gifting</h1>
-                    <p class="mt-4 max-w-3xl mx-auto text-sm text-gray-700 text-center">Be it a festive season, a corporate gathering, or a milestone celebration, we have ideal gift choices for all occasions. From ready-to-go gift baskets and sets to tailor-made gifts designed for businesses, we offer a diverse range of options to cater to various needs. </p>
+                    <p class="mt-4 max-w-3xl mx-auto text-sm text-gray-700 text-center">Corporate gifting is a powerful tool to build brand affinity and establish long-lasting business relationships. Gifting is not just limited to festivals, but can be given for various occasions like onboarding, farewells, birthdays, promotions, organisational milestones and individual achievements. A good quality corporate gift shows that you're invested in your stakeholder's experience and you should choose a gift that reflects your brand and we are here to curate the best quality hampers to showcase the brand and improve employee engagement and satisfaction. </p>
                 </div>
             </div>
 

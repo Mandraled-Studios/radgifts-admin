@@ -3,9 +3,9 @@
         <div class="ms-container">
             <div class="lg:max-w-3xl lg:mx-auto text-center">
                 <span class="ms-super-header"> </span>
-                <h2 class="text-primary font-semibold text-xl md:text-2xl mb-4"> Our Past Work </h2>
+                <h2 class="text-primary font-semibold text-xl md:text-2xl mb-4"> Our Portfolio </h2>
                 <p class="mb-4">
-                    Be it a festive season, a corporate gathering, or a milestone celebration, we have ideal gift choices for all occasions. From ready-to-go gift baskets and sets to tailor-made gifts designed for businesses, we offer a diverse range of options to cater to various needs. 
+                    Each and every client represents a significant milestone for us. Below is a glimpse of our past work.
                 </p>
             </div>
             <div class="mt-2 grid grid-cols-1 gap-x-2 gap-y-4 sm:grid-cols-2 sm:mx-auto sm:justify-center lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-2">
