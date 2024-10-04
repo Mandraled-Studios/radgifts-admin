@@ -14,6 +14,17 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
+        @php
+            $bannerBg = \App\Models\MarqueeBanner::where('key', 'banner_bg')->get()->first()->value;
+            $textColor = \App\Models\MarqueeBanner::where('key', 'banner_text_color')->get()->first()->value;
+            $bannerText = \App\Models\MarqueeBanner::where('key', 'banner_text')->get()->first()->value;
+            $ctaLabel = \App\Models\MarqueeBanner::where('key', 'banner_cta_label')->get()->first()->value;
+            $ctaStyle = \App\Models\MarqueeBanner::where('key', 'banner_cta_style')->get()->first()->value;
+            $ctaUrl = \App\Models\MarqueeBanner::where('key', 'banner_cta_url')->get()->first()->value;
+            
+        @endphp
+
+        <x-marqueebanner :bgcolor="$bannerBg" :textcolor="$textColor" :text="$bannerText" :ctalabel="$ctaLabel" :ctastyle="$ctaStyle" :ctaurl="$ctaUrl"></x-marqueebanner>
         <x-banner />
 
         <div class="min-h-screen">

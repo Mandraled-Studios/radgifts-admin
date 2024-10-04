@@ -1024,3 +1024,20 @@ video {
       left: 0;
     }
   }
+
+  .ms-infinite-marquee {
+    animation-name: infinite-marquee;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+  }
+
+  @keyframes infinite-marquee {
+    from {
+      left: 100%;
+    }
+    to {
+      left: -30%;
+    }
+  }
