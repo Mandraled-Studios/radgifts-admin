@@ -12,26 +12,107 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 md:-my-px md:ms-10 md:flex md:justify-between md:w-full">
-                    <div class="flex space-x-2 xl:space-x-8">
-                        <x-nav-link href="{{ route('pages.corporate') }}">
+                    
+                    <div class="hidden lg:flex lg:gap-x-12 items-center">
+                        <div x-data="{ open: false }" class="relative">
+                          <button @click="open = !open" type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false">
                             Corporate
-                        </x-nav-link>
-                        <x-nav-link href="{{ route('pages.personal') }}">
-                            Personal
-                        </x-nav-link>
-                        <x-nav-link href="{{ route('pages.works') }}">
-                            Our Portfolio
-                        </x-nav-link>
-                        <x-nav-link href="{{ route('pages.about') }}">
-                            About
-                        </x-nav-link>
-                        <x-nav-link href="{{ route('filamentblog.post.index') }}">
-                            Resources
-                        </x-nav-link>
-                        <x-nav-link href="{{ route('pages.contact') }}">
-                            Contact Us
-                        </x-nav-link>
+                            <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                              <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                            </svg>
+                          </button>
+                  
+                          <!--
+                            'Product' flyout menu, show/hide based on flyout menu state.
+                  
+                            Entering: "transition ease-out duration-200"
+                              From: "opacity-0 translate-y-1"
+                              To: "opacity-100 translate-y-0"
+                            Leaving: "transition ease-in duration-150"
+                              From: "opacity-100 translate-y-0"
+                              To: "opacity-0 translate-y-1"
+                          -->
+                          <div x-show="open" class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                            <div class="p-4">
+                              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                   <img class="w-8 h-8" src="https://radgifts.in/storage/01J8AWKRJ1CXVNZNT1FWD38WZ1.jpg" alt="Festive Hamper">
+                                </div>
+                                <div class="flex-auto">
+                                  <a href="/corporate-gifting/festive" class="block font-semibold text-gray-900">
+                                    Festive
+                                    <span class="absolute inset-0"></span>
+                                  </a>
+                                  <p class="mt-1 text-gray-600">Designed to delight and impress, featuring premium treats and artisanal goods.</p>
+                                </div>
+                              </div>
+                              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                  <img class="w-8 h-8" src="https://radgifts.in/storage/01J8AWPKESQCV8PJM0D2J5VFPZ.jpg" alt="Eco-Friendly Hampers">
+                                </div>
+                                <div class="flex-auto">
+                                  <a href="/corporate-gifting/eco-friendly" class="block font-semibold text-gray-900">
+                                    Eco-Friendly
+                                    <span class="absolute inset-0"></span>
+                                  </a>
+                                  <p class="mt-1 text-gray-600">Caters to eco-conscious consumers who care for environmental sustainability</p>
+                                </div>
+                              </div>
+                              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                  <img class="w-8 h-8" src="https://radgifts.in/storage/01J8AWQJHGJ919ES6Y0EJ5Z1RJ.jpg" alt="Onboarding Employees">
+                                </div>
+                                <div class="flex-auto">
+                                  <a href="/corporate-gifting/Onboarding" class="block font-semibold text-gray-900">
+                                    Onboarding
+                                    <span class="absolute inset-0"></span>
+                                  </a>
+                                  <p class="mt-1 text-gray-600">Welcome employees with gifts that highlight your branding</p>
+                                </div>
+                              </div>
+                              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                  <img class="w-8 h-8" src="https://radgifts.in/storage/01J8AWRNR7KHHR8P1R36ET419J.jpg" alt="Bespoke Collections">
+                                </div>
+                                <div class="flex-auto">
+                                  <a href="/corporate-gifting/bespoke" class="block font-semibold text-gray-900">
+                                    Bespoke
+                                    <span class="absolute inset-0"></span>
+                                  </a>
+                                  <p class="mt-1 text-gray-600"> Redefine the joy of giving with custom-made, personalized hampers. </p>
+                                </div>
+                              </div>
+                              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                                <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                  <img class="w-8 h-8" src="https://radgifts.in/storage/01J8AWTRKHSNX3A144SJNH34G5.jpg" alt="Packaging">
+                                </div>
+                                <div class="flex-auto">
+                                  <a href="/corporate-gifting/packaging" class="block font-semibold text-gray-900">
+                                    Packaging
+                                    <span class="absolute inset-0"></span>
+                                  </a>
+                                  <p class="mt-1 text-gray-600"> Enhance the unboxing experience with wood, acrylic, rigid boxes, jute bags</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="bg-gray-50">
+                              <a href="{{ route('pages.corporate') }}" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+                                <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                                  <path fill-rule="evenodd" d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z" clip-rule="evenodd" />
+                                </svg>
+                                View All Corporate Collections
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                  
+                        <a href="{{ route('pages.personal') }}" class="text-sm font-semibold leading-6 text-gray-900">Personal</a>
+                        <a href="{{ route('pages.works') }}" class="text-sm font-semibold leading-6 text-gray-900">Our Portfolio</a>
+                        <a href="{{ route('pages.about') }}" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+                        <a href="{{ route('filamentblog.post.index') }}" class="text-sm font-semibold leading-6 text-gray-900">Resources</a>
+                        <a href="{{ route('pages.contact') }}" class="text-sm font-semibold leading-6 text-gray-900">Contact Us</a>
                     </div>
+                    
                     <div class="flex space-x-2">
                         <x-nav-link href="https://www.linkedin.com/in/rad-gifts-770761236" class="px-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18.569" height="18.569" viewBox="0 0 18.569 18.569">
@@ -65,123 +146,6 @@
                         </x-nav-link>
                     </div>
                 </div>
-            </div>
-
-            <div class="hidden md:flex md:items-center md:ms-6">
-                <!-- Teams Dropdown -->
-                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                    <div class="ms-3 relative">
-                        <x-dropdown align="right" width="60">
-                            <x-slot name="trigger">
-                                <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
-                                        {{ Auth::user()->currentTeam->name }}
-
-                                        <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
-                                        </svg>
-                                    </button>
-                                </span>
-                            </x-slot>
-
-                            <x-slot name="content">
-                                <div class="w-60">
-                                    <!-- Team Management -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
-                                        {{ __('Manage Team') }}
-                                    </div>
-
-                                    <!-- Team Settings -->
-                                    <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
-                                        {{ __('Team Settings') }}
-                                    </x-dropdown-link>
-
-                                    @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                        <x-dropdown-link href="{{ route('teams.create') }}">
-                                            {{ __('Create New Team') }}
-                                        </x-dropdown-link>
-                                    @endcan
-
-                                    <!-- Team Switcher -->
-                                    @if (Auth::user()->allTeams()->count() > 1)
-                                        <div class="border-t border-gray-200 dark:border-gray-600"></div>
-
-                                        <div class="block px-4 py-2 text-xs text-gray-400">
-                                            {{ __('Switch Teams') }}
-                                        </div>
-
-                                        @foreach (Auth::user()->allTeams() as $team)
-                                            <x-switchable-team :team="$team" />
-                                        @endforeach
-                                    @endif
-                                </div>
-                            </x-slot>
-                        </x-dropdown>
-                    </div>
-                @endif
-
-                <!-- Settings Dropdown -->
-                {{-- 
-                <div class="ms-3 relative">
-                    @guest
-                        <x-nav-link href="{{ route('login') }}"> Login </x-nav-link>
-                    @else
-                        <x-dropdown align="right" width="48">
-                            <x-slot name="trigger">
-                                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                    <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                        <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                                    </button>
-                                @else
-                                    <span class="inline-flex rounded-md">
-                                        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
-                                            {{ Auth::user()->name }}
-
-                                            <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                            </svg>
-                                        </button>
-                                    </span>
-                                @endif
-                            </x-slot>
-
-                            <x-slot name="content">
-
-                                <!-- Account Management -->
-                                <div class="block px-4 py-2 text-xs text-gray-400">
-                                    {{ __('Manage Account') }}
-                                </div>
-
-                                <x-dropdown-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                                    {{ __('Dashboard') }}
-                                </x-dropdown-link>
-
-                                <x-dropdown-link href="{{ route('profile.show') }}">
-                                    {{ __('Profile') }}
-                                </x-dropdown-link>
-
-                                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                    <x-dropdown-link href="{{ route('api-tokens.index') }}">
-                                        {{ __('API Tokens') }}
-                                    </x-dropdown-link>
-                                @endif
-
-                                <div class="border-t border-gray-200 dark:border-gray-600"></div>
-
-                                <!-- Authentication -->
-                                <form method="POST" action="{{ route('logout') }}" x-data>
-                                    @csrf
-
-                                    <x-dropdown-link href="{{ route('logout') }}"
-                                            @click.prevent="$root.submit();">
-                                        {{ __('Log Out') }}
-                                    </x-dropdown-link>
-                                </form>
-                            </x-slot>
-                        </x-dropdown>
-                    @endguest
-                </div>
-                --}}
             </div>
 
             <!-- Hamburger -->
@@ -225,22 +189,42 @@
             </div>
 
             <div class="mt-3 space-y-1 px-2">
-                <x-responsive-nav-link href="{{ route('pages.corporate') }}">
-                    Corporate
-                </x-responsive-nav-link>
-                <x-responsive-nav-link href="{{ route('pages.personal') }}">
+                <div x-data="{ mobopen: false }" class="">
+                    <button @click="mobopen = !mobopen" type="button" class="flex w-full items-center justify-between rounded-lg py-2 pl-4 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
+                      Corporate
+                      <!--
+                        Expand/collapse icon, toggle classes based on menu open state.
+      
+                        Open: "rotate-180", Closed: ""
+                      -->
+                      <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                    <div x-show="mobopen" class="mt-2 space-y-2" id="disclosure-1">
+                      <a href="/corporate-gifting/festive" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-medium leading-7 text-gray-700 hover:bg-gray-50">Festive</a>
+                      <a href="/corporate-gifting/eco-friendly" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-medium leading-7 text-gray-700 hover:bg-gray-50">Eco-friendly</a>
+                      <a href="/corporate-gifting/Onboarding" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-medium leading-7 text-gray-700 hover:bg-gray-50">Onboarding</a>
+                      <a href="/corporate-gifting/bespoke" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-medium leading-7 text-gray-700 hover:bg-gray-50">Bespoke</a>
+                      <a href="/corporate-gifting/packaging" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-medium leading-7 text-gray-700 hover:bg-gray-50">Packaging</a>
+                      
+                      <a href="{{ route('pages.corporate') }}" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-medium leading-7 text-gray-700 hover:bg-gray-50">View All Corporate Collections</a>
+                    </div>
+                </div>
+                <x-responsive-nav-link class="py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" href="{{ route('pages.personal') }}">
                     Personal
                 </x-responsive-nav-link>
-                <x-responsive-nav-link href="{{ route('pages.works') }}">
+                <x-responsive-nav-link class="py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" href="{{ route('pages.works') }}">
                     Our Portfolio
                 </x-responsive-nav-link>
-                <x-responsive-nav-link href="{{ route('pages.about') }}">
+                <x-responsive-nav-link class="py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" href="{{ route('pages.about') }}">
                     About
                 </x-responsive-nav-link>
-                <x-responsive-nav-link href="{{ route('filamentblog.post.index') }}">
+                <x-responsive-nav-link class="py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" href="{{ route('filamentblog.post.index') }}">
                     Resources
                 </x-responsive-nav-link>
-                <x-responsive-nav-link href="{{ route('pages.contact') }}">
+                <x-responsive-nav-link class="py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" href="{{ route('pages.contact') }}">
                     Contact Us
                 </x-responsive-nav-link>
                 @guest
@@ -254,12 +238,6 @@
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
 
-                    @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                        <x-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
-                            {{ __('API Tokens') }}
-                        </x-responsive-nav-link>
-                    @endif
-
                     <!-- Authentication -->
                     <form method="POST" action="{{ route('logout') }}" x-data>
                         @csrf
@@ -270,38 +248,6 @@
                         </x-responsive-nav-link>
                     </form>
 
-                    <!-- Team Management -->
-                    @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                        <div class="border-t border-gray-200 dark:border-gray-600"></div>
-
-                        <div class="block px-4 py-2 text-xs text-gray-400">
-                            {{ __('Manage Team') }}
-                        </div>
-
-                        <!-- Team Settings -->
-                        <x-responsive-nav-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" :active="request()->routeIs('teams.show')">
-                            {{ __('Team Settings') }}
-                        </x-responsive-nav-link>
-
-                        @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                            <x-responsive-nav-link href="{{ route('teams.create') }}" :active="request()->routeIs('teams.create')">
-                                {{ __('Create New Team') }}
-                            </x-responsive-nav-link>
-                        @endcan
-
-                        <!-- Team Switcher -->
-                        @if (Auth::user()->allTeams()->count() > 1)
-                            <div class="border-t border-gray-200 dark:border-gray-600"></div>
-
-                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Switch Teams') }}
-                            </div>
-
-                            @foreach (Auth::user()->allTeams() as $team)
-                                <x-switchable-team :team="$team" component="responsive-nav-link" />
-                            @endforeach
-                        @endif
-                    @endif
                 @endguest
             </div>
         </div>

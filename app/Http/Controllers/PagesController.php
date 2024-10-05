@@ -106,7 +106,7 @@ class PagesController extends Controller
     }
 
     public function personalGifting(Request $request) {
-        $personal = Collection::where('corporate_hamper_flag', 0)->first();
+        $personal = Collection::where('corporate_hamper_flag', 0)->firstOrFail();
 
         $gifts = $personal->hampers;
         

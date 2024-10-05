@@ -6,7 +6,7 @@
                 <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 border-b border-gray-200">
                     <p class="ms-super-header text-lg font-bold text-center"> </p>
                     <h1 class="text-3xl font-bold tracking-tight text-primary text-center">{{$corporate_collection->title}}</h1>
-                    <p class="mt-4 max-w-3xl mx-auto text-sm text-gray-700 text-center"> {{$corporate_collection->description}} </p>
+                    <div class="mt-4 max-w-3xl mx-auto text-sm text-gray-700 text-center"> {!!$corporate_collection->collection_description!!} </div>
                 </div>
             </div>
 
