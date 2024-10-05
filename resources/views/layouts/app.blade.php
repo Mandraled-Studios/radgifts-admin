@@ -11,6 +11,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!-- Styles -->
+        <link rel="shortcut icon" href="{{asset('/images/favicon.png')}}" type="image/x-icon" />
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
