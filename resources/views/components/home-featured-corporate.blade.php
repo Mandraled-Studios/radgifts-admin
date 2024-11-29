@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="px-4 pt-1 pb-4">
                                     <p class="text-lg uppercase font-semibold text-gray-800 mb-2">
-                                        <a href="#">
+                                        <a href="{{ route('pages.corporate.hampers', ['collection' => $fc->slug]) }}">
                                             <span aria-hidden="true" class="absolute inset-0"></span>
                                             {{ $fc->title }}
                                         </a>
