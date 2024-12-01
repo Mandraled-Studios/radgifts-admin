@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:seo> 
+        <x-seosnippet :title="$title" :metadesc="$metadesc" :canonical="$canonical" :keywords="$keywords"> </x-seosnippet>
+    </x-slot>
     <section id="our-works" class="py-20">
         <div class="ms-container">
             <div class="lg:max-w-3xl lg:mx-auto text-center">

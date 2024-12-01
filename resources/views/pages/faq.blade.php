@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:seo> 
+        <x-seosnippet :title="$title" :metadesc="$metadesc" :canonical="$canonical" :keywords="$keywords"> </x-seosnippet>
+    </x-slot>
     <section id="ms-accordian" class="pb-6">
         <figure class="about-banner h-56 relative mb-10" style="background-image: url({{asset('images/about-banner.png')}}); background-size:cover;">
             <div class="ms-container">

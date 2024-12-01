@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot:seo> 
+        <x-seosnippet :title="$title" :metadesc="$metadesc" :canonical="$canonical" :keywords="$keywords"> </x-seosnippet>
+    </x-slot>
     <x-home-hero />
     <section id="clientele" class="bg-gray-100 py-6 mb-6">
         <div class="ms-container">

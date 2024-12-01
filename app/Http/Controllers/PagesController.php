@@ -80,7 +80,11 @@ class PagesController extends Controller
             'featuredCorporate' => $featuredCorporate,
             'featuredPersonal' => $featuredPersonal,
             'recentWorks' => $recentWorks,
-            'instaposts' => $instaposts
+            'instaposts' => $instaposts,
+            'title' => 'Contemporary Corporate gifting solution provider for all occasions | RAD Gifts',
+            'metadesc' => 'We provide assorted quirky, unconventional, utilitarian, eco-conscious gifting articles that are hand picked from vendors who are genuine and committed. Gift hampers for all occasions with creative packaging and personalisation. Ships globally. Doorstep delivery.',
+            'keywords' => 'customized corporate gifts, hampers, health & fitness related gifts, fragrance items',
+            'canonical' => 'https://radgifts.in'
         ]); 
     }
 
@@ -89,6 +93,10 @@ class PagesController extends Controller
         
         return view('pages.corporate-collections')->with([
             'corporate_collections' => $corporate_collections,
+            'title' => 'Contemporary Corporate gifting solution provider for all occasions | RAD Gifts',
+            'metadesc' => 'We provide assorted quirky, unconventional, utilitarian, eco-conscious gifting articles that are hand picked from vendors who are genuine and committed. Gift hampers for all occasions with creative packaging and personalisation. Ships globally. Doorstep delivery.',
+            'keywords' => 'customized corporate gifts, hampers, health & fitness related gifts, fragrance items',
+            'canonical' => 'https://radgifts.in/corporate-gifting'
         ]);
         
         //return Redirect::to('/under-maintenance', 301); 
@@ -103,6 +111,10 @@ class PagesController extends Controller
         
         return view('pages.corporate-collection-hampers')->with([
             'corporate_collection' => $corporate_collection,
+            'title' => $corporate_collection->title.' | RAD Gifts',
+            'metadesc' => $corporate_collection->meta_description,
+            'keywords' => 'customized corporate gifts, hampers, health & fitness related gifts, fragrance items',
+            'canonical' => 'https://radgifts.in/corporate-gifting/'.$corporate_collection->slug
         ]);
         
         //return Redirect::to('/under-maintenance', 301); 
@@ -116,7 +128,12 @@ class PagesController extends Controller
         
         return view('pages.personal')->with([
             'gifts' => $gifts,
+            'title' => 'Contemporary Corporate gifting solution provider for all occasions | RAD Gifts',
+            'metadesc' => 'We provide assorted quirky, unconventional, utilitarian, eco-conscious gifting articles that are hand picked from vendors who are genuine and committed. Gift hampers for all occasions with creative packaging and personalisation. Ships globally. Doorstep delivery.',
+            'keywords' => 'customized corporate gifts, hampers, health & fitness related gifts, fragrance items',
+            'canonical' => 'https://radgifts.in/personal-gifting'
         ]);
+        
         //return Redirect::to('/under-maintenance', 301); 
         
     }
@@ -126,6 +143,10 @@ class PagesController extends Controller
 
         return view('pages.ourworks')->with([
             'works' => $works,
+            'title' => 'Contemporary Corporate gifting solution provider for all occasions | RAD Gifts',
+            'metadesc' => 'We provide assorted quirky, unconventional, utilitarian, eco-conscious gifting articles that are hand picked from vendors who are genuine and committed. Gift hampers for all occasions with creative packaging and personalisation. Ships globally. Doorstep delivery.',
+            'keywords' => 'customized corporate gifts, hampers, health & fitness related gifts, fragrance items',
+            'canonical' => 'https://radgifts.in/our-work'
         ]);
     }
 
@@ -138,7 +159,12 @@ class PagesController extends Controller
     }
 
     public function about(Request $request) {
-        return view('pages.about');
+        return view('pages.about')->with([
+            'title' => 'Contemporary Corporate gifting solution provider for all occasions | RAD Gifts',
+            'metadesc' => 'We provide assorted quirky, unconventional, utilitarian, eco-conscious gifting articles that are hand picked from vendors who are genuine and committed. Gift hampers for all occasions with creative packaging and personalisation. Ships globally. Doorstep delivery.',
+            'keywords' => 'customized corporate gifts, hampers, health & fitness related gifts, fragrance items',
+            'canonical' => 'https://radgifts.in/about'
+        ]);
     }
 
     public function contact(Request $request) {
@@ -157,10 +183,19 @@ class PagesController extends Controller
 
         return view('pages.contact')->with([
             'company' => $company,
+            'title' => 'Contemporary Corporate gifting solution provider for all occasions | RAD Gifts',
+            'metadesc' => 'We provide assorted quirky, unconventional, utilitarian, eco-conscious gifting articles that are hand picked from vendors who are genuine and committed. Gift hampers for all occasions with creative packaging and personalisation. Ships globally. Doorstep delivery.',
+            'keywords' => 'customized corporate gifts, hampers, health & fitness related gifts, fragrance items',
+            'canonical' => 'https://radgifts.in/contact-us'
         ]);
     }
     public function faq(Request $request) {
-        return view('pages.faq');
+        return view('pages.faq')->with([
+            'title' => 'Contemporary Corporate gifting solution provider for all occasions | RAD Gifts',
+            'metadesc' => 'We provide assorted quirky, unconventional, utilitarian, eco-conscious gifting articles that are hand picked from vendors who are genuine and committed. Gift hampers for all occasions with creative packaging and personalisation. Ships globally. Doorstep delivery.',
+            'keywords' => 'customized corporate gifts, hampers, health & fitness related gifts, fragrance items',
+            'canonical' => 'https://radgifts.in/contact-us/faq'
+        ]);
     }
 
     public function newsletter(Request $request) {

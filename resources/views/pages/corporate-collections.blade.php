@@ -1,5 +1,9 @@
 <x-app-layout>
 
+    <x-slot:seo> 
+        <x-seosnippet :title="$title" :metadesc="$metadesc" :canonical="$canonical" :keywords="$keywords"> </x-seosnippet>
+    </x-slot>
+
     <div class="">
         <main>
             <div class="bg-white">

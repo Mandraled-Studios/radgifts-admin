@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'RAD Gifts') }}</title>
+        {{ $seo ?? ""}}
         
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -13,16 +13,16 @@
         <!-- Styles -->
         <link rel="shortcut icon" href="{{asset('/images/favicon.png')}}" type="image/x-icon" />
         @livewireStyles
+
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased overflow-x-hidden w-screen">
         @php
             $bannerBg = \App\Models\MarqueeBanner::where('key', 'banner_bg')->get()->first()->value;
             $textColor = \App\Models\MarqueeBanner::where('key', 'banner_text_color')->get()->first()->value;
             $bannerText = \App\Models\MarqueeBanner::where('key', 'banner_text')->get()->first()->value;
             $ctaLabel = \App\Models\MarqueeBanner::where('key', 'banner_cta_label')->get()->first()->value;
             $ctaStyle = \App\Models\MarqueeBanner::where('key', 'banner_cta_style')->get()->first()->value;
-            $ctaUrl = \App\Models\MarqueeBanner::where('key', 'banner_cta_url')->get()->first()->value;
-            
+            $ctaUrl = \App\Models\MarqueeBanner::where('key', 'banner_cta_url')->get()->first()->value; 
         @endphp
 
         <x-marqueebanner :bgcolor="$bannerBg" :textcolor="$textColor" :text="$bannerText" :ctalabel="$ctaLabel" :ctastyle="$ctaStyle" :ctaurl="$ctaUrl"></x-marqueebanner>
