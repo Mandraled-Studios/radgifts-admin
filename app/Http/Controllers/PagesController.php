@@ -155,7 +155,7 @@ class PagesController extends Controller
 
         return view('pages.workDetail')->with([
             'work' => $chosenWork,
-            'title' => $chosenWork->seotitle.' | RAD Gifts',
+            'title' => $chosenWork->title.' | RAD Gifts',
             'metadesc' => $chosenWork->meta_description,
             'keywords' => 'customized corporate gifts, hampers, health & fitness related gifts, fragrance items',
             'canonical' => 'https://radgifts.in/our-work/'.$chosenWork->slug 
