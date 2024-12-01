@@ -1,4 +1,7 @@
 <x-blog-layout>
+    <x-slot:canonical>
+        <link rel="canonical" href="{{env('APP_URL')}}/articles/{{$post->slug}}">
+    </x-slot>
     <section class="pb-16">
         <div class="container mx-auto">
             <div class="mb-10 flex gap-x-2 text-sm font-semibold">
@@ -30,7 +33,7 @@
                     <div class="space-y-10">
                         <div>
                             <div class="flex flex-col justify-end">
-                                <div class="mb-6 h-full w-full overflow-hidden rounded bg-slate-200">
+                                <div class="mb-6 h-full w-full overflow-hidden rounded">
                                     <img class="flex h-full min-h-[400px] items-center justify-center object-cover object-top text-sm text-xl font-semibold text-slate-400" src="{{ $post->featurePhoto  }}" alt="{{ $post->photo_alt_text }}">
                                 </div>
                                 <div class="mb-6">

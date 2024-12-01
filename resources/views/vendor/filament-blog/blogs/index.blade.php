@@ -1,4 +1,7 @@
 <x-blog-layout>
+    <x-slot:canonical>
+        <link rel="canonical" href="{{env('APP_URL')}}/articles">
+    </x-slot>
     @if(count($posts))
     <section class="py-8">
         <div class="container mx-auto">

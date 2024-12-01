@@ -10,6 +10,7 @@
     {!! $setting?->google_console_code !!}
     {!! $setting?->google_analytic_code !!}
     {!! $setting?->google_adsense_code !!}
+    {{ $canonical ?? ''}}
 
     <!-- Fonts -->
     
