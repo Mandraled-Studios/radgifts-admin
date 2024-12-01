@@ -1,6 +1,7 @@
 <x-blog-layout>
     <x-slot:canonical>
         <link rel="canonical" href="{{env('APP_URL')}}/articles">
+        <meta name="description" content="The most recent list of articles published by Radgifts that share of variety of knowledge about corporate and personal gifting.">
     </x-slot>
     @if(count($posts))
     <section class="py-8">

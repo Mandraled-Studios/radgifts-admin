@@ -1,6 +1,7 @@
 <x-blog-layout>
     <x-slot:canonical>
         <link rel="canonical" href="{{env('APP_URL')}}/articles/all">
+        <meta name="description" content="A list of all the articles published by Radgifts that share of variety of knowledge about corporate and personal gifting.">
     </x-slot>
     <section class="py-10">
         <header class="container mx-auto px-6">
